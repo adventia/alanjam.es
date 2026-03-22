@@ -1,0 +1,223 @@
+// ═══════════════════════════════════════════
+// Hero
+// Homepage header section.
+// ═══════════════════════════════════════════
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 72px;
+
+  &__eyebrow {
+    font-family: @f-body;
+    font-size: 13px;
+    font-weight: 500;
+    color: @c-accent;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: @c-accent;
+    opacity: 0.7;
+  }
+
+  &__title {
+
+    span {
+      color: @c-body;
+    }
+  }
+
+  &__subtitle {
+    .font-display(28px, 400);
+    color: @c-body;
+    margin-bottom: 24px;
+  }
+
+  // ─── Photo + award badges ───
+
+  &-photo__frame {
+    position: relative;
+    border-radius: @radius;
+    overflow: hidden;
+  }
+
+  &-photo__credit {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-family: @f-mono;
+    font-size: 11px;
+    font-weight: 300;
+    color: #fff;
+    z-index: 1;
+  }
+
+  // ─── Intro statement options ───
+
+  &__intro {
+    margin: 48px 0;
+
+    p {
+      font-family: @f-display;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: @c-heading;
+    }
+
+    // Option A: Centred quote with dash attribution
+    &--a {
+      text-align: center;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 40px 0;
+    }
+
+    &--a .hero__intro-name {
+      display: block;
+      margin-top: 20px;
+      font-family: @f-mono;
+      font-size: 14px;
+      font-weight: 700;
+      color: #FF2C55; // 3.39:1 — passes AA large text (14px bold = large)
+      letter-spacing: 0.02em;
+    }
+
+  }
+
+  &-photo__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    aspect-ratio: 21 / 9;
+  }
+
+  &-photo__awards {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  &-photo__award {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 6px;
+    padding: 6px 8px;
+
+    &--light {
+      background: rgba(255, 255, 255, 0.95);
+      filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.5));
+    }
+  }
+
+  &__logos {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid @c-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__logo {
+    height: 28px;
+    width: auto;
+    display: inline-block;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.4;
+    .transition(~"filter, opacity, transform");
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (max-width: @bp-md) {
+  .hero {
+    padding-top: 120px;
+
+    &__logos {
+      gap: 24px;
+    }
+
+    &__logo {
+      height: 18px;
+    }
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 40px;
+
+    &__subtitle {
+      font-size: 19px;
+      margin-bottom: 24px;
+    }
+
+    &__intro {
+      margin: 24px 0;
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+    }
+
+    &__intro--a {
+      padding: 0;
+
+      .hero__intro-name {
+        font-size: 11px;
+        margin-top: 12px;
+      }
+    }
+
+    &-photo {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+
+    &-photo__frame {
+      border-radius: 0;
+    }
+
+    &-photo__img {
+      aspect-ratio: 16 / 9;
+    }
+
+
+    &__logos {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 24px;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+
+    &__logo {
+      height: 16px;
+    }
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Alan James</title>
+  <meta name="description" content="Alan James — Award-winning product designer. 30 years at the intersection of design and development.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="resume" ng-controller="PortfolioCtrl as vm">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav (simplified for resume)
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html" class="nav__link">View portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       Resume content
+       ═══════════════════════════════════════ -->
+
+  <main id="main" class="resume-page">
+
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="resume-name">Alan James</h1>
+      <p class="resume-tagline">Designer. Developer. Founder.</p>
+      <div class="resume-awards">
+        <img src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner 2024">
+        <img src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner 2024">
+      </div>
+      <div class="resume-contact">
+        <a href="https://alanjam.es">alanjam.es</a>
+        <span class="resume-contact__sep" aria-hidden="true">&middot;</span>
+        <a href="mailto:alan.james@adventia.com.au">alan.james@adventia.com.au</a>
+        <span class="resume-contact__sep" aria-hidden="true">&middot;</span>
+        <span>+61 403 914 239</span>
+        <span class="resume-contact__sep" aria-hidden="true">&middot;</span>
+        <span>Sydney, Australia</span>
+      </div>
+    </header>
+
+
+    <!-- Summary -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Summary</h2>
+      <p class="resume-summary">
+        Award-winning product designer with 30 years at the intersection of design and development. Co-founded a platform that became the verb for festival production worldwide, and shipped products for Qantas, Westpac, and Service NSW that moved real numbers. I design things that get built.
+      </p>
+    </section>
+
+
+    <!-- Key achievements -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Key Achievements</h2>
+      <ul class="resume-achievements">
+        <li>290% uplift in home loan applications — Westpac Wonder</li>
+        <li>Good Design Award Gold 2024 — Loadin (zero advertising, organic global adoption)</li>
+        <li>$1.02m first-year EBIT from 12 CRO experiments — Qantas Health Insurance</li>
+        <li>State-wide booking platform serving 8 million citizens — Service NSW</li>
+        <li>2× conversion uplift on highest-trafficked page — Qantas Credit Card Selector</li>
+      </ul>
+    </section>
+
+
+    <!-- Experience -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Experience</h2>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Senior Product Designer</h3>
+          <span class="resume-role__company">Qantas Loyalty</span>
+          <span class="resume-role__dates">Sep 2024 – present</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>2× conversion uplift on Credit Card Selector through rapid CRO experimentation</li>
+          <li>Appointed Practice Lead for experimentation across Financial Services tribe</li>
+          <li>Designing Embedded Loyalty component platform for partner banking apps</li>
+        </ul>
+
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Co-founder</h3>
+          <span class="resume-role__company">Loadin.com</span>
+          <span class="resume-role__dates">Jul 2017 – present</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>Zero to global platform powering SXSW, Reading &amp; Leeds, and the Olympics</li>
+          <li>Good Design Award Gold + Service Design Award 2024</li>
+          <li>Designed, architected and built the entire product — UX, front-end and IA</li>
+          <li>Entirely organic growth — $0 ad spend, adopted by word of mouth worldwide</li>
+          <li>Handed operations to GM and dev to engineering team — business thrives independently</li>
+        </ul>
+        <a href="https://alanjam.es/pages/loadin.html" class="resume-role__link">View case study →</a>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Design Principal</h3>
+          <span class="resume-role__company">Pragmateam / Service NSW</span>
+          <span class="resume-role__dates">Apr 2020 – Apr 2023</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>Expanded scope from driving test fix to universal booking platform for 8m citizens</li>
+          <li>Led all design across the consultancy; mentored junior and offshore designers</li>
+          <li>Prototype-led stakeholder engagement secured executive buy-in for state-wide vision</li>
+        </ul>
+        <a href="https://alanjam.es/pages/service-nsw.html" class="resume-role__link">View case study →</a>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Senior Experience Designer</h3>
+          <span class="resume-role__company">Qantas Ventures</span>
+          <span class="resume-role__dates">Jul 2019 – Apr 2020</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>12 CRO experiments generating $1.02m EBIT first year (target was $0.5m)</li>
+          <li>10,700 new call centre leads through purchase funnel optimisation</li>
+        </ul>
+        <a href="https://alanjam.es/pages/qantas-ventures.html" class="resume-role__link">View case study →</a>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Consultant</h3>
+          <span class="resume-role__company">Welcome to Country</span>
+          <span class="resume-role__dates">Sep 2018 – Aug 2019</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>Optimised purchase path for Indigenous-led tourism marketplace</li>
+          <li>Now the leading Indigenous marketplace in the southern hemisphere</li>
+        </ul>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Practice Lead, Prototyping</h3>
+          <span class="resume-role__company">Westpac</span>
+          <span class="resume-role__dates">Nov 2014 – Sep 2018</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>290% increase in applications; form completion 1.67% → 9.25%</li>
+          <li>Established HTML prototyping practice adopted at executive level</li>
+          <li>CX Lead across St. George business banking, home loans, and Westpac Wonder</li>
+        </ul>
+        <a href="https://alanjam.es/pages/westpac.html" class="resume-role__link">View case study →</a>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">UX Lead</h3>
+          <span class="resume-role__company">Thomson Reuters</span>
+          <span class="resume-role__dates">Apr 2010 – Jul 2014</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>Led discovery-to-build for Checkpoint tax research platform</li>
+          <li>Redesigned Westlaw; established global application experience branding</li>
+        </ul>
+      </div>
+
+      <div class="resume-role">
+        <div class="resume-role__header">
+          <h3 class="resume-role__title">Senior Developer / Experience Designer</h3>
+          <span class="resume-role__company">Expedia AU/NZ</span>
+          <span class="resume-role__dates">Nov 2006 – Jun 2008</span>
+        </div>
+        <ul class="resume-role__bullets">
+          <li>Purchase path optimisation and A/B testing for AU/NZ market entry</li>
+        </ul>
+      </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Skills</h2>
+      <p class="resume-skills">
+        Product Design · UX Design · Interaction Design · Information Architecture · Design Systems · CRO / Experimentation · HTML / CSS / JavaScript · Prototyping · Usability Testing · Stakeholder Engagement · Agile · Accessibility · AngularJS
+      </p>
+    </section>
+
+
+    <!-- Awards -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Awards</h2>
+      <div class="resume-item">
+        <div class="resume-item__main">Good Design Award Gold — Digital Design, Apps &amp; Software (2024)</div>
+      </div>
+      <div class="resume-item">
+        <div class="resume-item__main">Good Design Award — Service Design, Commercial Services (2024)</div>
+      </div>
+    </section>
+
+
+    <!-- Education -->
+    <section class="resume-section">
+      <h2 class="resume-section__title">Education</h2>
+      <div class="resume-item">
+        <div class="resume-item__main">MSc by Research: The Business Case for the Internet</div>
+        <div class="resume-item__detail">University of Salford (1998)</div>
+      </div>
+      <div class="resume-item">
+        <div class="resume-item__main">BEng (Hons) Computers, Management &amp; Electronics (2:I)</div>
+        <div class="resume-item__detail">University of Salford (1996)</div>
+      </div>
+    </section>
+
+
+    <!-- Footer link -->
+    <footer class="resume-footer">
+      <a href="https://alanjam.es">Full portfolio and case studies at alanjam.es</a>
+    </footer>
+
+  </main>
+
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

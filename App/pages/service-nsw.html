@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service NSW — Alan James</title>
+  <meta name="description" content="Transforming the way 8 million citizens interact with NSW government services. From driving tests to a universal booking platform.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="cs cs--service-nsw" ng-controller="PortfolioCtrl as vm">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <picture>
+        <source srcset="../img/projects/snsw-hero.webp" type="image/webp">
+        <img class="cs-hero__image" src="../img/projects/snsw-hero.png" alt="Service NSW booking platform">
+      </picture>
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">Service NSW</div>
+        <h1 class="cs-hero__title">8 million lives, <span class="cs-hero__emphasis">simplified.</span></h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Context
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The context</div>
+        <h2 class="cs-section__title">I was asked to fix driving test bookings. <span class="cs-section__title-punch">I saw something much bigger.</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          Service NSW needed to replace an end-of-life system for booking driving tests. That was
+          the brief. But once I started the discovery work, it became clear this was a symptom of a
+          much larger problem &mdash; there was no universal way for 8 million NSW citizens to book
+          any appointment with their government.
+        </p>
+        <p>
+          Walk into a Service Centre and you might be there 10 minutes or 2 hours. No-one knew.
+          In regional areas, people were driving hours to places like Dubbo with no certainty their
+          visit would be productive. The automated queuing system at the door was so hard to
+          navigate that every centre needed a Concierge to operate it on behalf of customers.
+        </p>
+        <p>
+          I pushed the scope. First from driving tests to all Transport for NSW bookings &mdash;
+          maritime licences, knowledge tests &mdash; where the user journeys overlapped
+          significantly. Then further, to all 181 transaction types that Service NSW handled. And
+          ultimately, to a vision for a single booking platform across all NSW Government
+          departments: Health, Education, Justice, the lot.
+        </p>
+        <p>
+          Executive Management embraced the vision. What started as a driving test fix became the
+          front door to government services for an entire state.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Concierge
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/snsw-concierge.avif" alt="A concierge at a Service NSW branch">
+    <figcaption class="cs-image-inline__caption">A concierge at a Service NSW branch</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Research & validation
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Research</div>
+        <h2 class="cs-section__title">Designing for everyone means testing with everyone</h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            A government platform has to work for all citizens, not just the digitally literate ones.
+            We ran card sorting workshops with Service Centre managers to restructure the IA across
+            all 181 transaction types, then validated it across two rounds of usability testing with
+            the general public.
+          </p>
+          <p>
+            The first cohort was skewed towards regional and rural users. The second was skewed
+            towards culturally and linguistically diverse (CALD) communities &mdash; English as a
+            second language. The new IA was overwhelmingly validated: 7 out of 8 in cohort 1 and
+            6 out of 8 in cohort 2 completed all tasks successfully.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            Beyond IA validation, the generative research confirmed what we suspected: the
+            uncertainty of wait times was the core pain point. Nobody was confident about how long
+            they&rsquo;d be at the Service Centre. For metro users it was an annoyance. For regional
+            users who&rsquo;d driven hours to get there, it could derail their entire day.
+          </p>
+          <p>
+            A booking system wasn&rsquo;t just a nice-to-have. It was the single highest-impact
+            improvement we could make to the citizen experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Booking customer journey
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/snsw-journey-diagram.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/snsw-journey-diagram.png" alt="Booking customer journey">
+    </picture>
+    <figcaption class="cs-image-inline__caption">Booking customer journey</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Design approach
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The approach</div>
+        <h2 class="cs-section__title">Best in class, not just best in government</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          I deliberately looked beyond how other Australian states handle government bookings. The
+          benchmark I kept coming back to was the Apple Store &mdash; how you book a Genius Bar
+          appointment to get a device fixed. You choose a time, you show up, and someone is ready
+          for you. That confidence and simplicity was the target, regardless of whether the booking
+          was for a driving test, a birth certificate, or a firearms licence.
+        </p>
+        <p>
+          I analysed every booking type we could face and found that a single variable model could
+          handle all of them. One flexible journey, not dozens of bespoke flows. That was the
+          architectural decision that made the platform scalable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Wireframes
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--half reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/snsw-wireframes.gif" alt="Low-fidelity wireframes of the booking flow">
+    <figcaption class="cs-image-inline__caption">Low-fidelity wireframes of the booking flow</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Prototyping
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Prototyping</div>
+        <h2 class="cs-section__title">One prototype, two audiences, zero handoff</h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            We started with Balsamiq wireframes for early stakeholder collaboration &mdash; low
+            enough fidelity that everyone felt comfortable contributing, but structured enough to
+            map the full journey. From there, I built a data-rich, fully interactive HTML prototype.
+          </p>
+          <p>
+            There were so many permutations of the booking journey that flat design files couldn&rsquo;t
+            capture them. The prototype handled real branching logic, different transaction types,
+            location selection, and time slot availability. It felt like the real thing because it
+            behaved like the real thing.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            This is where my philosophy of Data Driven Design pays dividends. The prototype served two purposes
+            simultaneously: testing with real citizens to validate the experience, and demonstrating
+            the vision to executive stakeholders who needed to see it working before they&rsquo;d
+            back it.
+          </p>
+          <p>
+            It proved spectacularly effective at both. Citizens validated the flows. Executives
+            greenlit the expanded scope. One artefact, two audiences, zero handoff delay.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The outcome
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The outcome</div>
+        <h2 class="cs-section__title">From driving test fix to state-wide platform</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The platform I designed and architected launched with Careers NSW as its first use case,
+          with my original wireframes, journeys and high-fidelity visuals implemented almost
+          flawlessly. It has since expanded to service centre appointments &mdash; the use case I
+          was most passionate about &mdash; giving citizens the ability to book a time and know
+          their visit will be productive.
+        </p>
+      </div>
+
+      <figure class="cs-image-inline cs-image-inline--natural reveal reveal-d2" reveal>
+        <picture>
+          <source srcset="../img/projects/snsw-bookingpage.webp" type="image/webp">
+          <img class="cs-image-inline__img" src="../img/projects/snsw-bookingpage.png" alt="Service NSW booking page on desktop and mobile">
+        </picture>
+        <figcaption class="cs-image-inline__caption">The end product. Life-changing transformation for the NSW population</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What this demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this demonstrates</div>
+        <h2 class="cs-section__title">Seeing the bigger picture &mdash; and building it</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          This project shows what happens when you combine strategic thinking with the ability to
+          make ideas tangible. I didn&rsquo;t just identify the opportunity to expand the scope
+          &mdash; I built the prototype that convinced executives to back it. I didn&rsquo;t just
+          design for the default user &mdash; I tested with regional communities and non-native
+          English speakers to make sure it worked for everyone.
+        </p>
+        <p>
+          A driving test booking fix became a platform serving 8 million people. That&rsquo;s
+          what happens when you zoom out.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The client said
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The client said</div>
+      </div>
+      <div class="cs-testimonial cs-testimonial--social reveal reveal-d1" reveal>
+        <div class="cs-testimonial__header">
+          <img class="cs-testimonial__avatar" src="../img/projects/peter-lofgren-headshot.jpeg" alt="Peter Löfgren">
+          <div>
+            <div class="cs-testimonial__author">Peter L&ouml;fgren</div>
+            <div class="cs-testimonial__role">Head of Design, Service NSW</div>
+          </div>
+        </div>
+        <p class="cs-testimonial__quote">
+          &ldquo;Alan&rsquo;s superpower is making ideas real. Before you know it, he has already
+          done a beautiful, fully working prototype that you can use to test the validity of the
+          idea and quickly of course correct accordingly. He&rsquo;s such a powerful catalyst for
+          real innovation.&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Related links
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Related links</div>
+      </div>
+      <div class="cs-links reveal reveal-d1" reveal>
+        <div class="cs-links__list">
+          <a href="https://www.service.nsw.gov.au/transaction/book-an-appointment-at-a-service-centre" target="_blank" rel="noopener" class="cs-links__link">Service NSW Booking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="loadin.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Loadin.com</div>
+        </a>
+        <a href="qantas-ventures.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Qantas Ventures</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- AngularJS (CDN — not bundled) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

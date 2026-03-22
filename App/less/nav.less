@@ -1,0 +1,133 @@
+// ═══════════════════════════════════════════
+// Nav
+// Fixed navigation bar with scroll state.
+// ═══════════════════════════════════════════
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 @gutter;
+  background: @c-bg;
+  border-bottom: 1px solid @c-border;
+  .transition(~"box-shadow");
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 32px;
+    background: linear-gradient(to bottom, @c-bg, fade(@c-bg, 0%));
+    pointer-events: none;
+    .transition(~"background");
+  }
+
+  &--over-dark::after {
+    background: linear-gradient(to bottom, @c-dark, fade(@c-dark, 0%));
+  }
+
+  &--scrolled {
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  &__inner {
+    max-width: @max-w;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: @f-mono;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #FF2C55;
+    text-transform: lowercase;
+  }
+
+  &__logo-tld {
+    color: #FF2C55;
+  }
+
+  &__awards {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 24px;
+    padding-left: 24px;
+    border-left: 1px solid @c-border;
+  }
+
+  &__award {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  &__links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: @f-body;
+    font-size: 13px;
+    font-weight: 500;
+    color: @c-muted;
+    .transition(color);
+
+    &:hover {
+      color: @c-heading;
+    }
+  }
+}
+
+@media (max-width: @bp-md) {
+  .nav {
+    padding: 0 @gutter-sm;
+
+    &__links {
+      gap: 18px;
+    }
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .nav {
+    padding: 0 16px;
+
+    &__inner {
+      height: 56px;
+    }
+
+    &__logo {
+      font-size: 20px;
+    }
+
+    &__awards {
+      display: none;
+    }
+
+    &__links {
+      gap: 16px;
+    }
+
+    &__link {
+      font-size: 14px;
+      padding: 8px 0; // larger touch target
+    }
+  }
+}

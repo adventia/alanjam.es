@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westpac — Alan James</title>
+  <meta name="description" content="Redesigning home loans from 1.67% to 9.25% form completion. 290% uplift in applications.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="cs cs--westpac" ng-controller="PortfolioCtrl as vm">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <img class="cs-hero__image" src="../img/projects/wbc-hero.jpg" alt="Westpac home loan redesign" style="object-position: center calc(50% - 150px);">
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">Westpac</div>
+        <h1 class="cs-hero__title"><span class="cs-hero__emphasis">290%</span> more applications.</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Context
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The context</div>
+        <h2 class="cs-section__title">125 people couldn&rsquo;t fix it. <span class="cs-section__title-punch">22 of us did.</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          Westpac Wonder was conceived to rethink the entire home ownership journey &mdash; not
+          selling product, but the life goal of owning a home. The first version launched and
+          wasn&rsquo;t getting traction. The project had become too large and bloated to be
+          effective. At the end of PI02, the headcount was downsized from 125 to 22 high-performing
+          people. That&rsquo;s when I arrived.
+        </p>
+        <p>
+          Our job: figure out the pain points and increase form completion. We had 12 weeks. I was
+          the sole UX Designer, and alongside Brad Smith &mdash; the best visual designer I&rsquo;ve
+          ever worked with &mdash; we set about
+          understanding why so many people weren&rsquo;t completing the journey. The completion
+          rate at the time was 1.67%. For every 100 people who started the Approval in Principle
+          form, fewer than 2 finished.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Hub and spoke model
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--third reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/wbc-hubspoke.gif" alt="Existing hub and spoke form model">
+    <figcaption class="cs-image-inline__caption">The existing &lsquo;hub and spoke&rsquo; model</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The Problem
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The problem</div>
+        <h2 class="cs-section__title">Users didn&rsquo;t feel like they were making progress</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The existing flow used a &lsquo;hub and spoke&rsquo; model &mdash; complete a section,
+          return to a central page, continue to the next. Page analytics told us the story
+          immediately: users weren&rsquo;t going past the first return to the hub. Sharp drop-off
+          from section two onwards.
+        </p>
+        <p>
+          User testing confirmed why. People had no sense of how far through they were, no
+          indication of progress, and a feeling of disorientation. The word that kept coming up was
+          &lsquo;reward&rsquo; &mdash; they needed to feel like the effort was leading somewhere
+          tangible. A home loan is the most significant financial decision most people will ever
+          make. If the form makes them feel lost, they leave.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Approach
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The approach</div>
+        <h2 class="cs-section__title">SME workshops, critical path analysis, HTML prototype</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          With 12 weeks, quick wins were the order of the day. We analysed what needed to be asked,
+          in what order, and mapped the dependencies &mdash; in a home loan application, whether
+          you&rsquo;re married affects shared living expenses, which affects how many fields appear.
+        </p>
+        <p>
+          We ran workshops with subject matter experts to define the critical path, keeping the
+          content of the original page blocks largely as-is while transforming the overall IA.
+          Then I built a full high-fidelity HTML prototype &mdash; not wireframes, not flat
+          comps, a working form that behaved like the real thing. We usability tested it in
+          regular two-week cycles, refining order, context and copy with each round. Because I
+          was the designer and the builder, changes from a Tuesday test session were live in the
+          prototype by Thursday. That speed compounds &mdash; six testing cycles in 12 weeks meant
+          six rounds of real user evidence shaping the design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: The linear approach
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--third reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/wbc-linear.gif" alt="The new linear form model">
+    <figcaption class="cs-image-inline__caption">The linear approach</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The Solution
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The solution</div>
+        <h2 class="cs-section__title">17 pages became 9, with a progress bar that doubled as navigation</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          We distilled the 17-page journey into 9 targeted pages with a progress bar prominently
+          at the top that also served as navigation. Hub and spoke became a true linear model. We
+          added supporting information where it was needed, removed jargon, and stripped unnecessary
+          clutter from the interface.
+        </p>
+      </div>
+
+      <div class="cs-testimonial reveal reveal-d2" reveal>
+        <p class="cs-testimonial__quote">
+          &ldquo;I feel so much more comfortable completing this form. I know where I am every step
+          of the way.&rdquo;
+        </p>
+        <div class="cs-testimonial__author">Angela S</div>
+        <div class="cs-testimonial__role">Usability testing interviewee, round 4</div>
+      </div>
+
+      <div class="cs-testimonial reveal reveal-d3" reveal>
+        <p class="cs-testimonial__quote">
+          &ldquo;It feels like I am in control of my destiny. No bank jargon there to make me feel
+          like I don&rsquo;t know what I&rsquo;m doing.&rdquo;
+        </p>
+        <div class="cs-testimonial__author">Paul D</div>
+        <div class="cs-testimonial__role">Usability testing interviewee, round 3</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Outcome
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The outcome</div>
+        <h2 class="cs-section__title">They had to hire more people to handle the demand</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Completion went from 1.67% to 9.25%. Successful Approval in Principle applications
+          increased by 290% &mdash; so much so that they needed to increase the size of the
+          customer service centre to handle the extra load. Average time to complete the form
+          decreased by over half.
+        </p>
+        <p>
+          Westpac Wonder is still active today in almost exactly the same structure as when I
+          completed my work on the project.
+        </p>
+      </div>
+
+      <div class="cs-stats reveal reveal-d2" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">9.25%</div>
+          <div class="cs-stat__label">Completion rate (from 1.67%)</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">290%</div>
+          <div class="cs-stat__label">Increase in successful applications</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">52%</div>
+          <div class="cs-stat__label">Decrease in time to complete</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What this demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this demonstrates</div>
+        <h2 class="cs-section__title">Orientation builds confidence, confidence builds completion</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Users need to know where they are, how far they&rsquo;ve come, and that the effort is
+          leading somewhere. A progress bar isn&rsquo;t just a UI pattern &mdash; it&rsquo;s a
+          promise. But the real lesson is speed of learning. An HTML prototyping approach that
+          lets you test with real users in two-week cycles &mdash; where the designer builds the
+          prototype, runs the test, and ships the fix &mdash; can transform a 1.67% form into a
+          9.25% form in 12 weeks. That&rsquo;s what happens when there&rsquo;s no handoff.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The client said
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The client said</div>
+      </div>
+
+      <div class="cs-testimonial cs-testimonial--social reveal reveal-d1" reveal>
+        <div class="cs-testimonial__header">
+          <img class="cs-testimonial__avatar" src="../img/projects/dave-stewart-headshot.jpeg" alt="David Stewart">
+          <div>
+            <div class="cs-testimonial__author">David Stewart</div>
+            <div class="cs-testimonial__role">Project Owner, Westpac Wonder</div>
+          </div>
+        </div>
+        <p class="cs-testimonial__quote">
+          &ldquo;Alan is a self proclaimed &lsquo;unicorn&rsquo; and he lives up to the title.
+          I&rsquo;ve worked with him to create new home loan experience for our customers, build
+          awesome prototypes and rapidly code go to market experiences for our customers all while
+          meeting and exceeding the high standards of the bank.&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="qantas-ventures.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Qantas Ventures</div>
+        </a>
+        <a href="loadin.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Loadin.com</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- AngularJS (CDN — not bundled) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

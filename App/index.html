@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan James — Product Designer</title>
+  <meta name="description" content="Award-winning product and interaction designer with 30 years of craft. Design, code, and leadership at the intersection.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css css/portfolio.min.css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-controller="PortfolioCtrl as vm">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="#" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="#approach" class="nav__link" smooth-scroll>Approach</a>
+        <a href="#work" class="nav__link" smooth-scroll>Work</a>
+        <a href="#contact" class="nav__link" smooth-scroll>Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <main id="main">
+  <header class="hero container">
+
+<div class="reveal reveal-d1" reveal>
+      <h1 class="t-display t-display--lg hero__title">
+          Rock star product designer.
+        </h1>
+      <p class="hero__subtitle">None of the ego. All of the performance.</p>
+    </div>
+
+    <div class="reveal reveal-d2" reveal>
+      <div class="hero-photo">
+        <div class="hero-photo__frame">
+          <picture>
+            <source srcset="img/alan-james-stage.webp" type="image/webp">
+            <img class="hero-photo__img" src="img/alan-james-stage.jpg" alt="Alan James on stage">
+          </picture>
+          <span class="hero-photo__credit">Photo: Macleay Harriot</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d3" reveal>
+      <div class="hero__intro hero__intro--a">
+        <p>"Most designers hand off to developers. Most developers don't understand design.
+        I've spent thirty years doing both — designing products for Westpac, Qantas, and
+        Service NSW while building a platform from zero that now powers some of the biggest
+        festivals on the planet. That dual fluency means I design things that actually get
+        built, ship faster, and move real numbers."</p>
+        <span class="hero__intro-name">— Alan James</span>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d4" reveal>
+      <div class="hero__logos">
+        <picture>
+          <source srcset="img/logos/qantas.webp" type="image/webp">
+          <img class="hero__logo" src="img/logos/qantas.png" alt="Qantas">
+        </picture>
+        <img class="hero__logo" src="img/logos/westpac.svg" alt="Westpac">
+        <picture>
+          <source srcset="img/logos/service-nsw.webp" type="image/webp">
+          <img class="hero__logo" src="img/logos/service-nsw.png" alt="Service NSW">
+        </picture>
+        <picture>
+          <source srcset="img/logos/thomson-reuters.webp" type="image/webp">
+          <img class="hero__logo" src="img/logos/thomson-reuters.png" alt="Thomson Reuters">
+        </picture>
+        <img class="hero__logo" src="img/logos/expedia.svg" alt="Expedia">
+      </div>
+    </div>
+
+  </header>
+
+
+  <!-- ═══════════════════════════════════════
+       Approach (Dark Section)
+       ═══════════════════════════════════════ -->
+
+  <section id="approach" class="section--dark">
+    <div class="container">
+      <div class="grid-2">
+
+        <!-- Left: beliefs -->
+        <div>
+          <div class="reveal" reveal>
+            <h2 class="t-display t-display--md approach__title">Designer. Developer. Founder.</h2>
+          </div>
+          <div class="reveal reveal-d1" reveal>
+            <p class="t-body approach__intro">
+              30 years of harnessing technology to solve real problems — for startups,
+              government, and some of Australia's biggest brands. Here's what I've learned
+              about what actually moves the needle.
+            </p>
+          </div>
+
+          <div class="reveal reveal-d2" reveal>
+            <div class="belief">
+              <h3 class="belief__heading">Solve the right problem</h3>
+              <p class="belief__body">
+                The most impactful thing I do is zoom out. Before pixels, before code — is this
+                the right problem? I bring stakeholders on that journey so the vision has buy-in
+                from the start.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d3" reveal>
+            <div class="belief">
+              <h3 class="belief__heading">Make the complex simple</h3>
+              <p class="belief__body">
+                Whether it's a data-rich credit card comparison or a government booking flow, the
+                art is in what you take away. Clarity isn't dumbing down — it's doing the hard
+                thinking so users don't have to.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d4" reveal>
+            <div class="belief">
+              <h3 class="belief__heading">Data driven design</h3>
+              <p class="belief__body">
+                I start from the data — the JSON, the API, the real content — and design back
+                from that. My prototypes aren't clickable mockups, they're dynamic, data-driven
+                journeys that surface "unknown unknowns" early, before they become expensive.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d5" reveal>
+            <div class="belief" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+              <h3 class="belief__heading">Bring people with you</h3>
+              <p class="belief__body">
+                At least half of a designer's job is getting people to buy what you're
+                selling. I'm a pragmatist, not a purist. I pick the hills to die on, win the
+                battles that matter, and bring stakeholders on the journey so good work actually
+                ships.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: junction panel -->
+        <div class="reveal reveal-d2 junction-panel-wrap" reveal>
+            <div class="junction-panel">
+              <div class="t-label" style="color: rgba(242,239,234,0.55); margin-bottom: 28px;">
+                What I bring together
+              </div>
+
+              <div class="junction-pair">
+                <div class="junction-pair__labels">
+                  <span class="junction-pair__name">Design thinking</span>
+                  <span class="junction-pair__line">
+                    <span class="junction-pair__dot"></span>
+                  </span>
+                  <span class="junction-pair__name">Technical fluency</span>
+                </div>
+                <p class="junction-pair__desc">
+                  I think in technology — understanding what's feasible shapes better design from
+                  the start. Prototypes become real, testable things, not slide decks.
+                </p>
+              </div>
+
+              <div class="junction-pair">
+                <div class="junction-pair__labels">
+                  <span class="junction-pair__name">Big picture vision</span>
+                  <span class="junction-pair__line">
+                    <span class="junction-pair__dot"></span>
+                  </span>
+                  <span class="junction-pair__name">Attention to detail</span>
+                </div>
+                <p class="junction-pair__desc">
+                  I zoom out to find the right problem, then zoom all the way in to make sure every
+                  interaction feels right.
+                </p>
+              </div>
+
+              <div class="junction-pair" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                <div class="junction-pair__labels">
+                  <span class="junction-pair__name">Stakeholder trust</span>
+                  <span class="junction-pair__line">
+                    <span class="junction-pair__dot"></span>
+                  </span>
+                  <span class="junction-pair__name">Design conviction</span>
+                </div>
+                <p class="junction-pair__desc">
+                  I build genuine relationships first. That's how bold design decisions get adopted —
+                  not through politics, but through partnership.
+                </p>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Selected Work
+       ═══════════════════════════════════════ -->
+
+  <section id="work" class="section container">
+
+    <div class="section-header reveal" reveal>
+      <h2 class="t-display t-display--sm">Selected work</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- Loadin.com (Hero card) -->
+      <a href="pages/loadin.html" class="project-card project-card--hero reveal" reveal
+         style="background-color: #1A1A1A; background-image: url('img/projects/loadin-gda-hero.jpg');">
+        <div class="project-card__overlay"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">loadin.com</span>
+          </div>
+          <div class="project-card__metric">Good Design Award<sup style="font-size: 0.5em;">&reg;</sup> <span style="color: #FFD700;">Gold</span> winner</div>
+          <div class="project-card__metric-detail">Australian Good Design Awards 2024</div>
+          <p class="project-card__teaser">From zero to one. Solving product market fit through human centred design. Who knew?</p>
+          <span class="project-card__link">View case study →</span>
+        </div>
+      </a>
+
+      <!-- Service NSW -->
+      <a href="pages/service-nsw.html" class="project-card reveal reveal-d1" reveal
+         style="background-color: #2B5EA7; background-image: url('img/projects/snsw-hero.png');">
+        <div class="project-card__overlay"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">Service NSW</span>
+          </div>
+          <div class="project-card__metric">8 million lives, simplified</div>
+          <div class="project-card__metric-detail">Online Booking Platform</div>
+          <p class="project-card__teaser">From a driving test fix to the front door to government services for an entire state.</p>
+          <span class="project-card__link">View case study →</span>
+        </div>
+      </a>
+
+      <!-- Qantas Ventures -->
+      <a href="pages/qantas-ventures.html" class="project-card project-card--qv reveal reveal-d2" reveal
+         style="background-color: #7B4BAA; background-image: url('img/projects/qv-hero.jpg');">
+        <div class="project-card__overlay"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">Qantas</span>
+          </div>
+          <div class="project-card__metric">$1m new revenue through CRO</div>
+          <div class="project-card__metric-detail">Qantas Health Insurance</div>
+          <p class="project-card__teaser">12 experiments, $1 million in new revenue. Target was half that.</p>
+          <span class="project-card__link">View case study →</span>
+        </div>
+      </a>
+
+      <!-- Westpac -->
+      <a href="pages/westpac.html" class="project-card project-card--wbc reveal reveal-d3" reveal
+         style="background-color: #C17A28; background-image: url('img/projects/wbc-hero.jpg');">
+        <div class="project-card__overlay"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">Westpac</span>
+          </div>
+          <div class="project-card__metric">290% more applications</div>
+          <div class="project-card__metric-detail">Westpac Wonder</div>
+          <p class="project-card__teaser">From 1.67% to 9.25% completion. They had to hire more people to handle the demand.</p>
+          <span class="project-card__link">View case study →</span>
+        </div>
+      </a>
+
+      <!-- Loadin Brand & Design System -->
+      <a href="pages/loadin-brand.html" class="project-card project-card--loadin-brand reveal reveal-d4" reveal
+         style="background-color: #1A1A1A; background-image: url('img/projects/loadin-hero.jpg');">
+        <div class="project-card__overlay"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">loadin.com</span>
+          </div>
+          <div class="project-card__metric">A brand. Then a verb.</div>
+          <div class="project-card__metric-detail">Brand &amp; Design System</div>
+          <p class="project-card__teaser">Creating a brand, design system and icon library for an industry that had never had software.</p>
+          <span class="project-card__link">View case study →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>© 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- AngularJS (CDN — not bundled) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+  <!-- build:js js/portfolio.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

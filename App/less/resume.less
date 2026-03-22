@@ -1,0 +1,367 @@
+// ═══════════════════════════════════════════
+// Resume Page
+// ATS-friendly, single-column, print-ready.
+// ═══════════════════════════════════════════
+
+
+// ─── Page layout ───
+
+.resume {
+
+  .nav::after {
+    display: none;
+  }
+
+  .resume-page {
+    .container();
+    max-width: 720px;
+    padding-top: 96px;
+    padding-bottom: 80px;
+  }
+}
+
+
+// ─── Header ───
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 56px;
+  padding-bottom: 36px;
+  border-bottom: 2px solid @c-accent;
+}
+
+.resume-name {
+  .font-display(42px, 500);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.resume-tagline {
+  .font-display(18px, 400);
+  font-style: italic;
+  color: @c-accent;
+  margin-bottom: 16px;
+}
+
+.resume-awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+  }
+}
+
+.resume-contact {
+  .font-mono(12px, 400);
+  color: @c-muted;
+  line-height: 1.6;
+
+  a {
+    color: @c-body;
+    .transition(color);
+
+    &:hover {
+      color: @c-accent;
+    }
+  }
+
+  .resume-contact__sep {
+    margin: 0 8px;
+    color: @c-border;
+  }
+}
+
+
+// ─── Sections ───
+
+.resume-section {
+  margin-bottom: 48px;
+}
+
+.resume-section__title {
+  .font-label();
+  font-size: 11px;
+  color: @c-accent;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @c-border;
+}
+
+
+// ─── Summary ───
+
+.resume-summary {
+  .font-body(16px, 400);
+  line-height: 1.75;
+  color: @c-body;
+}
+
+
+// ─── Key achievements ───
+
+.resume-achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-achievements li {
+  .font-body(14px, 400);
+  padding: 8px 0 8px 16px;
+  border-left: 3px solid @c-accent;
+  margin-bottom: 8px;
+  color: @c-heading;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// ─── Experience ───
+
+.resume-role {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.resume-role__header {
+  margin-bottom: 8px;
+}
+
+.resume-role__title {
+  .font-body(15px, 600);
+  color: @c-heading;
+  display: inline;
+}
+
+.resume-role__company {
+  .font-body(15px, 400);
+  color: @c-muted;
+  display: inline;
+
+  &::before {
+    content: ' — ';
+  }
+}
+
+.resume-role__dates {
+  .font-mono(12px, 400);
+  color: @c-muted;
+  display: block;
+  margin-top: 2px;
+}
+
+.resume-role__bullets {
+  list-style: none;
+  padding: 0;
+
+  li {
+    .font-body(14px, 400);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+
+    &::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: @c-muted;
+    }
+  }
+}
+
+.resume-role__link {
+  .font-mono(11px, 400);
+  color: @c-accent;
+  .transition(color);
+  display: inline-block;
+  margin-top: 4px;
+
+  &:hover {
+    color: @c-heading;
+  }
+}
+
+
+// ─── Skills ───
+
+.resume-skills {
+  .font-body(14px, 400);
+  color: @c-body;
+  line-height: 1.8;
+}
+
+
+// ─── Awards & Education ───
+
+.resume-item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.resume-item__main {
+  .font-body(14px, 500);
+  color: @c-heading;
+}
+
+.resume-item__detail {
+  .font-body(13px, 400);
+  color: @c-muted;
+}
+
+
+// ─── Portfolio link footer ───
+
+.resume-footer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid @c-border;
+  text-align: center;
+
+  a {
+    .font-mono(13px, 500);
+    color: @c-accent;
+    .transition(color);
+
+    &:hover {
+      color: @c-heading;
+    }
+  }
+}
+
+
+// ═══════════════════════════════════════════
+// Print styles
+// ═══════════════════════════════════════════
+
+@media print {
+  .resume {
+    background: #fff;
+
+    .nav {
+      display: none;
+    }
+
+    .resume-page {
+      padding-top: 0;
+      padding-bottom: 0;
+      max-width: 100%;
+    }
+  }
+
+  .resume-awards {
+    display: none;
+  }
+
+  .resume-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom-width: 1px;
+  }
+
+  .resume-name {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+
+  .resume-tagline {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .resume-contact {
+    font-size: 10px;
+  }
+
+  .resume-section {
+    margin-bottom: 20px;
+  }
+
+  .resume-section__title {
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+  }
+
+  .resume-role {
+    margin-bottom: 16px;
+  }
+
+  .resume-achievements li,
+  .resume-role__bullets li,
+  .resume-summary,
+  .resume-skills,
+  .resume-item__main {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .resume-item__detail {
+    font-size: 11px;
+  }
+
+  .resume-role__title,
+  .resume-role__company {
+    font-size: 13px;
+  }
+
+  .resume-role__dates {
+    font-size: 10px;
+  }
+
+  .resume-footer a {
+    color: @c-heading;
+
+    &::after {
+      content: ' (alanjam.es)';
+      font-weight: 400;
+    }
+  }
+
+  // Prevent page breaks inside roles
+  .resume-role {
+    page-break-inside: avoid;
+  }
+}
+
+
+// ─── Responsive ───
+
+@media (max-width: @bp-sm) {
+  .resume {
+    .resume-page {
+      padding: 80px @gutter-sm 48px;
+    }
+  }
+
+  .resume-name {
+    font-size: 32px;
+  }
+
+  .resume-tagline {
+    font-size: 16px;
+  }
+
+  .resume-contact .resume-contact__sep {
+    display: none;
+  }
+
+  .resume-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
