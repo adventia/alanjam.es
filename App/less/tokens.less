@@ -1,0 +1,72 @@
+// ═══════════════════════════════════════════
+// Design Tokens
+// The single source of truth for all visual decisions.
+// ═══════════════════════════════════════════
+
+
+// ─── Typography ───
+
+@f-display:    'Lora', Georgia, serif;
+@f-body:       'Manrope', -apple-system, sans-serif;
+@f-mono:       'JetBrains Mono', 'SF Mono', monospace;
+
+
+// ─── Colour ───
+
+@c-bg:              #F8F6F1;
+@c-surface:         #FFFFFF;
+@c-heading:         #2A2824;
+@c-body:            #55514A;     // 7.10:1 on @c-bg — WCAG AAA
+@c-muted:           #767269;     // 4.54:1 on @c-bg — WCAG AA
+@c-border:          #E6E2DB;
+
+@c-accent:          #1B7A5A;
+@c-accent-light:    #E8F4EF;
+@c-accent-border:   #C5DED3;
+@c-accent-10:       rgba(27, 122, 90, 0.1);
+
+@c-dark:            #2A2824;
+@c-dark-surface:    #33312C;
+@c-dark-text:       #F2EFEA;
+@c-dark-muted:      rgba(242, 239, 234, 0.75);  // ~7.1:1 on @c-dark — WCAG AAA
+@c-dark-subtle:     rgba(242, 239, 234, 0.70); // ~6.5:1 on @c-dark — WCAG AA+
+@c-dark-border:     rgba(255, 255, 255, 0.07);
+@c-dark-faint:      rgba(255, 255, 255, 0.06);
+@c-dark-ghost:      rgba(255, 255, 255, 0.05);
+
+// Project accent colours
+@c-qantas:          #1B7A5A;
+@c-loadin:          #B85C38;
+@c-service-nsw:     #2B5EA7;
+@c-qantas-ventures: #7B4BAA;
+@c-westpac:         #C17A28;
+
+
+// ─── Layout ───
+
+@max-w:     980px;
+@gutter:    48px;
+@gutter-sm: 24px;
+@gutter-xs: 16px;
+
+// ─── Breakpoints (max-width) ───
+// SM 0–767 (min target 375), MD 768–1023, LG 1024–1439, XL 1440+
+
+@bp-lg: 1439px;
+@bp-md: 1023px;
+@bp-sm: 767px;
+
+
+// ─── Radius ───
+
+@radius:    8px;
+@radius-sm: 10px;
+@radius-xs: 5px;
+
+
+// ─── Motion ───
+
+@ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+@duration:      0.65s;
+@duration-fast: 0.4s;
+@duration-slow: 0.45s;

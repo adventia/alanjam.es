@@ -1,0 +1,22 @@
+{
+  "name": "alan-james-portfolio",
+  "version": "1.0.0",
+  "description": "Alan James — Product Designer Portfolio",
+  "author": "Alan James",
+  "private": true,
+  "devDependencies": {
+    "grunt": "1.4.1",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-uglify": "4.0.1",
+    "grunt-contrib-connect": "2.1.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-contrib-clean": "2.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-cssmin": "3.0.0",
+    "grunt-autoprefixer": "3.0.4",
+    "grunt-rev": "0.1.0",
+    "grunt-usemin": "3.1.1",
+    "connect-livereload": "0.5.4"
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" fill="none" stroke="#2A2824" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Pinky finger -->
+  <path d="M9 24 L9 6"/>
+  <!-- Index finger -->
+  <path d="M25 24 L25 6"/>
+  <!-- Tucked fingers (subtle bumps) -->
+  <path d="M9 24 C9 27, 12 29, 17 29 C22 29, 25 27, 25 24"/>
+  <!-- Thumb curving out -->
+  <path d="M25 27 Q30 27, 31 22"/>
+</svg>

@@ -1,0 +1,180 @@
+// ═══════════════════════════════════════════
+// Accessibility
+// Skip links, focus states, reduced motion,
+// high contrast mode, screen reader utilities.
+// ═══════════════════════════════════════════
+
+
+// ─── Skip link ───
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 200;
+  padding: 12px 24px;
+  background: @c-heading;
+  color: #fff;
+  font-family: @f-body;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: @radius-xs;
+  text-decoration: none;
+  .transition(top);
+
+  &:focus {
+    top: 12px;
+    outline: 3px solid @c-accent;
+    outline-offset: 2px;
+  }
+}
+
+
+// ─── Focus states ───
+// Visible, high-contrast focus ring for keyboard navigation.
+// Uses :focus-visible to avoid showing on mouse clicks.
+
+*:focus-visible {
+  outline: 3px solid @c-accent;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Suppress default outline when :focus-visible is supported
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Dark section focus — invert for visibility
+.section--dark *:focus-visible,
+.cs-hero *:focus-visible,
+.cs-nav *:focus-visible,
+.contact-dark *:focus-visible {
+  outline-color: #fff;
+}
+
+// Card focus lift (matches hover behaviour)
+.project-card__link:focus-visible {
+  outline: none;
+
+  .project-card {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+    border-color: @c-accent;
+  }
+}
+
+// Nav logo focus
+.nav__logo:focus-visible {
+  outline-offset: 6px;
+}
+
+
+// ─── Screen reader only ───
+// Visually hidden but accessible to assistive tech.
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+// ─── Reduced motion ───
+// Respects user preference for minimal animation.
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  // Reveal elements immediately — no slide-up
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+// ─── High contrast mode ───
+// Stronger borders, no transparency, bolder text for users
+// who prefer more contrast.
+
+@media (prefers-contrast: more) {
+
+  // Strengthen borders
+  .nav {
+    border-bottom: 2px solid @c-heading;
+  }
+
+  .project-card,
+  .cs-stat {
+    border: 2px solid @c-heading;
+  }
+
+  // Remove transparency — solid colours only
+  .belief__body,
+  .junction-pair__desc,
+  .approach__intro,
+  .contact-dark__body,
+  .cs-nav__direction {
+    color: @c-dark-text;
+  }
+
+  // Stronger section labels
+  .cs-section__label,
+  .resume-section__title {
+    color: @c-heading;
+    border-bottom-color: @c-heading;
+  }
+
+  // Bolder muted text
+  .nav__link,
+  .footer span,
+  .cs-image-inline__caption,
+  .cs-stat__label,
+  .career-row__period,
+  .career-row__org {
+    color: @c-body;
+  }
+
+  // Links always underlined
+  a:not(.nav__logo):not(.project-card__link):not(.cs-hero__back):not(.cs-nav__link):not(.skip-link) {
+    text-decoration: underline;
+  }
+
+  // Dark sections — stronger text
+  .section--dark {
+    .belief__heading {
+      color: #fff;
+    }
+  }
+
+  // Logo row — full opacity
+  .hero__logo {
+    opacity: 0.7;
+    filter: grayscale(0.5);
+  }
+
+  // Tags — stronger border
+  .tag {
+    border: 1px solid @c-body;
+    color: @c-body;
+  }
+}

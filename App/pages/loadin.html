@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loadin.com — Alan James</title>
+  <meta name="description" content="From zero to a global festival platform powering SXSW, Reading &amp; Leeds and the Olympics. Good Design Award Gold 2024. $0 advertising spend.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="cs cs--loadin" ng-controller="PortfolioCtrl as vm">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <picture>
+        <source srcset="../img/projects/loadin-hero2.webp" type="image/webp">
+        <img class="cs-hero__image" src="../img/projects/loadin-hero2.jpg" alt="Loadin presented at the Good Design Awards" style="object-position: center 65%;">
+      </picture>
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">Loadin.com</div>
+        <h1 class="cs-hero__title">Good Design Award<sup style="font-size: 0.5em;">&reg;</sup> <span class="cs-hero__emphasis" style="color: #FFD700;">Gold</span> winner.</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Origin
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The origin</div>
+        <h2 class="cs-section__title">&lsquo;Why don&rsquo;t we zoom out <span class="cs-section__title-punch">and fix it for the world?&rsquo;</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          I met my co-founder Haydn Johnston in the most unlikely of tech startup incubators
+          &mdash; mother&rsquo;s group for our first-borns. We bonded over music and sneaking
+          away for a pint at our local, and the conversation kept coming back to the same
+          problem: live music production was broken. &lsquo;This time next year&rsquo;, we
+          joked. We weren&rsquo;t joking for long.
+        </p>
+        <p>
+          Too many times, at least once a festival, there&rsquo;d be a dispute over whether
+          specifications had actually been agreed. Artists didn&rsquo;t trust that their Technical
+          Rider would be translated into reality. Festival production staff were never sure they
+          had the latest document. Several people on each side having separate conversations, none
+          of them aware of the others. Information scattered across emails, faxes, and phone calls.
+        </p>
+        <p>
+          Haydn had one too many festivals with the inevitable outcome of miscommunication. He
+          asked me to build him a database to solve it. In classic designer mode, I replied:
+          &lsquo;why don&rsquo;t we zoom out and fix it for the world?&rsquo;
+        </p>
+        <p>
+          That was the sliding doors moment. What started as a favour for a mate became the
+          opportunity to build something that was the culmination of my entire career &mdash;
+          design, development, and product thinking, all pointed at one wicked problem. The
+          ambition was that the very biggest artists in the world would be using our platform
+          (spoiler: Billie Eilish was on the very first show. Coldplay took a little longer).
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Problem
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The problem</div>
+        <h2 class="cs-section__title">Certainty of performance</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          A festival has three stakeholders: the promoter, the artist, and the audience. If an
+          artist&rsquo;s stage requirements don&rsquo;t get heard, the performance suffers. If the
+          performance suffers, the audience has a problem. And if the audience has a problem, the
+          event has a problem. Everything cascades from one broken link &mdash; uncertainty about
+          what was agreed before show day.
+        </p>
+        <p>
+          We started with a workshop. We got stakeholders from Laneway &mdash; Australia&rsquo;s
+          biggest touring festival &mdash; along with industry leaders and artist representatives
+          into one room. Everyone had a story to tell.
+        </p>
+        <p>
+          We got the post-it notes out. Nothing was off limits. This wasn&rsquo;t a blame exercise
+          but an opportunity to solve a long-held dissonance between artist and festival. The
+          affinity mapping surfaced one overriding theme: <strong>transparency</strong>. Both sides
+          wanted a single source of truth &mdash; one place where the Technical Rider was current,
+          agreed, and visible to everyone who needed it.
+        </p>
+        <p>
+          From that exercise we found our MVP. And we found our first customer &mdash; Laneway
+          agreed to pilot the platform for their upcoming 2018 tour, starting January 26 in
+          Singapore. We had until November.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: The first field
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--quarter reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/loadin-first-field.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/loadin-first-field.jpg" alt="Creating the first field in the first database table">
+    </picture>
+    <figcaption class="cs-image-inline__caption">Well, you have to start somewhere&hellip;</figcaption>
+  </figure>
+
+
+
+  <!-- ═══════════════════════════════════════
+       The Approach
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The approach</div>
+        <h2 class="cs-section__title">Customer-centred from day one</h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            We wrote a clear hypothesis: an online portal where artists and festivals could
+            collaborate in a single interface would reduce the disparity between what the artist
+            expects on showday and what the production team believes is correct.
+          </p>
+          <p>
+            I made it clear to Alice &mdash; our SME at Laneway &mdash; that the line was always
+            open. This was to be fully customer-centred design. Many times she&rsquo;d call with
+            small additions to scope. If a quick DVF analysis showed it was feasible and would add
+            value at scale, we built it.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            I designed and built the UX, the front-end, and the information architecture. For
+            visual design I brought in Brad Smith &mdash; the best visual designer I&rsquo;ve
+            ever worked with, and someone I&rsquo;d go on to collaborate with at Westpac. Together
+            we&rsquo;re double the sum of our parts. No dev team beyond me. I could see a problem
+            in a user session and ship a fix the same day.
+          </p>
+          <p>
+            Growth was entirely organic. Zero advertising spend. Festivals adopted it because it
+            solved a real problem better than anything else. Each new client made the platform
+            smarter &mdash; their workflows shaped the product, not the other way around.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Building the product
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Building the product</div>
+        <h2 class="cs-section__title">Architecture decisions that compound</h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            Early on I made a deliberate architectural choice: build for the general case, not the
+            specific client. Laneway was the first customer, but the data model had to work for any
+            festival, any venue, any scale. Every entity &mdash; artist, event, stage, schedule slot
+            &mdash; was abstracted so that the platform could grow without being rewritten.
+          </p>
+          <p>
+            That decision paid for itself within 12 months. When Live Nation UK came on board with
+            a dozen festivals, the platform handled it without a single structural change. When SXSW
+            needed to manage 1,000+ acts across multiple venues, the same architecture scaled.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            On the design side, I built a component-based design system from day one &mdash;
+            informed by my experience building Westpac&rsquo;s GEL. Over 100 custom SVG icons
+            designed for the specific context of festival production. A colour system that works on
+            a muddy festival site at 2am on a phone screen. Typography optimised for scanning, not
+            reading &mdash; because production managers don&rsquo;t have time to read.
+          </p>
+          <p>
+            The iteration cycle was relentless. I&rsquo;d watch users in the field, identify friction,
+            and ship fixes the same day. No handoff, no sprint planning, no ticket queue. That
+            speed is the compound advantage of being both designer and developer &mdash; the feedback
+            loop is measured in hours, not weeks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Design system
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--half reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/loadin-designsystem.gif" alt="Loadin design system at launch">
+    <figcaption class="cs-image-inline__caption">The design system at launch, 2018 &mdash; built on foundations from Westpac GEL</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The Growth
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The growth</div>
+        <h2 class="cs-section__title">From one festival to the world</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Loadin launched on 5 November 2017. Every band on the Laneway bill uploaded their
+          riders. Across seven legs of the tour, there were zero disputes. Unheard of.
+        </p>
+      </div>
+
+      <figure class="cs-image-inline cs-image-inline--natural reveal reveal-d2" reveal>
+        <picture>
+          <source srcset="../img/projects/loadin-champagne.webp" type="image/webp">
+          <img class="cs-image-inline__img" src="../img/projects/loadin-champagne.jpg" alt="Champagne glasses with the Laneway 2018 invite on screen">
+        </picture>
+        <figcaption class="cs-image-inline__caption">Might be onto something here&hellip;</figcaption>
+      </figure>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          From there, it grew &mdash; entirely by word of mouth. First across Australia: Spilt
+          Milk, Beyond the Valley, Wildlands, and the Sydney Gay and Lesbian Mardi Gras. Then
+          into the UK, powering all of Live Nation and Festival Republic&rsquo;s events &mdash;
+          Reading &amp; Leeds, Download, Isle of Wight, Latitude, Wireless, and Radio 1 Big
+          Weekend. Then Pride in London, Camp Bestival, Independent Venue Week, Isle of MTV
+          Malta, and the UK Olympic and Paralympic homecomings.
+        </p>
+        <p>
+          In 2023 we went to the next level: the entire SXSW Sydney program. Two years later,
+          SXSW London. As part of this rapid expansion I was able to hand over day-to-day
+          operations to a superstar General Manager &mdash; Kat Coppins, who was also our very
+          first paying customer back in 2019 &mdash; and hand the development reins to a talented
+          team.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Award
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The award</div>
+        <h2 class="cs-section__title">30 years. First nomination. <span class="cs-section__title-punch">Two wins.</span></h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          We thought &mdash; why not see if the work stacks up against everyone else? In thirty
+          years of designing and building things, I&rsquo;d never nominated for or won an award.
+          But I was prouder of Loadin than anything I&rsquo;d been involved in. So we entered the
+          Good Design Awards.
+        </p>
+        <p>
+          We didn&rsquo;t just win once. We won twice &mdash; a Good Design Award for Service
+          Design, and a coveted Gold for
+          Digital Design, up against submissions from multinationals with budgets we couldn&rsquo;t
+          dream of. Two blokes, zero advertising spend, Gold.
+        </p>
+        <p>
+          This wasn&rsquo;t down to me alone. Without Haydn there&rsquo;s no problem to solve
+          &mdash; his deep industry knowledge and relationships opened every door. Without Brad,
+          the design wouldn&rsquo;t have the polish that made it award-worthy &mdash; a creative
+          partnership where we&rsquo;re genuinely double the sum of our parts. You find that once
+          or twice in a lifetime if you&rsquo;re lucky. And without Kat, who took the reins as
+          General Manager and turned Loadin into a thriving business, I&rsquo;d still be running
+          operations instead of doing what I do best &mdash; being curious and solving problems.
+        </p>
+        <p>
+          That&rsquo;s the point. Loadin is in exceptional hands, which means I get to bring
+          everything it taught me &mdash; zero-to-one thinking, product-market fit, building for
+          real users &mdash; to the next challenge.
+        </p>
+      </div>
+
+      <figure class="cs-image-inline cs-image-inline--natural reveal reveal-d2" reveal>
+        <picture>
+          <source srcset="../img/projects/loadin-gda-hero.webp" type="image/webp">
+          <img class="cs-image-inline__img" src="../img/projects/loadin-gda-hero.jpg" alt="Kat Coppins, Alan James, Brad Smith and Haydn Johnston at the Good Design Awards 2024">
+        </picture>
+        <figcaption class="cs-image-inline__caption">Kat, me, Brad and Haydn &mdash; Good Design Awards night, 2024</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The client said
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The client said</div>
+      </div>
+
+      <div class="cs-testimonial cs-testimonial--social reveal reveal-d1" reveal>
+        <div class="cs-testimonial__header">
+          <img class="cs-testimonial__avatar" src="../img/projects/jono-whyman-headshot.jpeg" alt="Jono Whyman">
+          <div>
+            <div class="cs-testimonial__author">Jono Whyman</div>
+            <div class="cs-testimonial__role">Co-CEO, SXSW Sydney</div>
+          </div>
+        </div>
+        <p class="cs-testimonial__quote">
+          &ldquo;Loadin was effectively the front door into SXSW Sydney 2023 and will be again
+          this year. They perfectly mastered the art of making the complex simple. It meant the
+          talent could completely self-administer their performance at the event. It is the event
+          management platform the world has been waiting for!&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Related links
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Related links</div>
+      </div>
+      <div class="cs-links reveal reveal-d1" reveal>
+        <div class="cs-links__list">
+          <a href="https://loadin.com" target="_blank" rel="noopener" class="cs-links__link">loadin.com</a>
+          <a href="https://good-design.org/projects/loadin-revolutionising-festival-advancing-through-thoughtful-design/" target="_blank" rel="noopener" class="cs-links__link">Good Design Award — Digital Design (Gold)</a>
+          <a href="https://good-design.org/projects/seamless-showdays-loadins-innovation-in-artist-advancing/" target="_blank" rel="noopener" class="cs-links__link">Good Design Award — Service Design</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="westpac.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Westpac</div>
+        </a>
+        <a href="service-nsw.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Service NSW</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- AngularJS (CDN — not bundled) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

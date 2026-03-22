@@ -1,0 +1,236 @@
+// ═══════════════════════════════════════════
+// Project Cards
+// Full-image teaser cards linking to case study pages.
+// ═══════════════════════════════════════════
+
+.project-grid {
+  .grid(1fr 1fr, 24px);
+}
+
+.project-card {
+  position: relative;
+  display: block;
+  border-radius: @radius;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center calc(~"50% - 150px");
+  .transition(transform);
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  // ─── Gradient overlay ───
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.6) 45%,
+      rgba(0, 0, 0, 0.95) 65%,
+      rgba(0, 0, 0, 0.98) 100%
+    );
+  }
+
+  &:hover &__overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 15%,
+      rgba(0, 0, 0, 0.65) 42%,
+      rgba(0, 0, 0, 0.96) 62%,
+      rgba(0, 0, 0, 0.99) 100%
+    );
+  }
+
+  // ─── Content (sits on top of overlay) ───
+
+  &__body {
+    position: absolute;
+    top: 180px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  // ─── Meta row ───
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__client {
+    font-family: @f-body;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__period {
+    .font-mono(11px);
+    color: #fff;
+  }
+
+  // ─── Metric ───
+
+  &__metric {
+    font-family: @f-display;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+
+  &__metric-detail {
+    font-family: @f-body;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 4px;
+  }
+
+  // ─── Teaser ───
+
+  &__teaser {
+    font-family: @f-body;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 12px;
+  }
+
+  // ─── Link ───
+
+  &__link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: @f-body;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s @ease-out,
+                transform 0.3s @ease-out;
+  }
+
+  &:hover &__link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // ─── Hero card (spans both columns) ───
+
+  &--hero {
+    grid-column: ~"1 / -1";
+    min-height: 460px;
+    background-position: center calc(~"50% + 50px");
+
+    .project-card__body {
+      padding-top: 100px;
+    }
+  }
+}
+
+.tag {
+  .font-mono(10px, 400);
+  color: @c-muted;
+  background: #F5F2ED;
+  padding: 4px 10px;
+  border-radius: @radius-xs;
+  letter-spacing: 0.01em;
+}
+
+
+// ─── Stat card (used in hero) ───
+
+.stat-card {
+  background: @c-surface;
+  border: 1px solid @c-border;
+  border-radius: @radius-sm;
+  padding: 14px 16px;
+
+  &__value {
+    font-family: @f-display;
+    font-size: 18px;
+    font-weight: 400;
+    color: @c-heading;
+  }
+}
+
+
+// ─── Responsive ───
+
+@media (max-width: @bp-md) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .project-grid {
+    gap: 24px;
+  }
+
+  .project-card {
+    min-height: 200px;
+    background-position: center center;
+
+    &__body {
+      top: auto;
+      padding: 16px;
+      justify-content: flex-end;
+    }
+
+    &__metric {
+      font-size: 22px;
+    }
+
+    &__teaser {
+      display: none;
+    }
+
+    &__link {
+      .sr-only();
+    }
+
+    &--qv {
+      background-position: center calc(~"50% - 65px") !important;
+    }
+
+    &--wbc {
+      background-position: center calc(~"50% - 60px") !important;
+    }
+
+    &--loadin-brand {
+      background-position: center calc(~"50% - 50px") !important;
+    }
+
+    &--hero {
+      min-height: 240px;
+      background-position: center top;
+
+      .project-card__body {
+        padding-top: 40px;
+      }
+    }
+  }
+}

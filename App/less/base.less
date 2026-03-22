@@ -1,0 +1,36 @@
+// ═══════════════════════════════════════════
+// Base
+// Reset and global element styles.
+// ═══════════════════════════════════════════
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: @c-bg;
+  color: @c-heading;
+  font-family: @f-body;
+  font-size: 15px;
+  line-height: 1.76;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

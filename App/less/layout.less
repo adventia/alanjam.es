@@ -1,0 +1,85 @@
+// ═══════════════════════════════════════════
+// Layout
+// Containers, grids, and sections.
+// ═══════════════════════════════════════════
+
+.container {
+  .container();
+}
+
+.grid-2 {
+  .grid(1fr 1fr);
+
+  &--wide    { .grid(1.2fr 1fr); }
+  &--contact { .grid(1.3fr 1fr); }
+}
+
+.grid-stats {
+  .grid(1fr 1fr, 12px);
+}
+
+.grid-career {
+  .grid(88px 1fr 1fr, 20px);
+  align-items: baseline;
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  &--dark {
+    background: @c-dark;
+    padding: 88px @gutter;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+
+
+// ─── Responsive ───
+
+@media (max-width: @bp-md) {
+  .container {
+    padding: 0 @gutter-sm;
+  }
+
+  .grid-2,
+  .grid-2--wide,
+  .grid-2--contact {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .grid-career {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .section--dark {
+    padding: 60px @gutter-sm;
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .section--dark {
+    padding: 48px 0 0;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+}

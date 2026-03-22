@@ -1,0 +1,93 @@
+// ═══════════════════════════════════════════
+// Mixins
+// Reusable patterns that keep the component
+// styles clean and consistent.
+// ═══════════════════════════════════════════
+
+
+// ─── Typography ───
+
+.font-display(@size: 28px, @weight: 400) {
+  font-family: @f-display;
+  font-size: @size;
+  font-weight: @weight;
+  letter-spacing: -0.02em;
+  color: @c-heading;
+}
+
+.font-body(@size: 15px, @weight: 400) {
+  font-family: @f-body;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: 1.76;
+  color: @c-body;
+}
+
+.font-mono(@size: 12px, @weight: 300) {
+  font-family: @f-mono;
+  font-size: @size;
+  font-weight: @weight;
+}
+
+.font-label() {
+  font-family: @f-body;
+  font-size: 11px;
+  font-weight: 600;
+  color: @c-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+// ─── Layout ───
+
+.container() {
+  max-width: @max-w;
+  margin: 0 auto;
+  padding: 0 @gutter;
+}
+
+.grid(@cols: 1fr 1fr, @gap: 48px) {
+  display: grid;
+  grid-template-columns: @cols;
+  gap: @gap;
+}
+
+
+// ─── Cards ───
+
+.card(@radius: @radius) {
+  background: @c-surface;
+  border-radius: @radius;
+  border: 1px solid @c-border;
+}
+
+.card-hover() {
+  transition: transform @duration-fast @ease-out,
+              box-shadow @duration-fast @ease-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+}
+
+
+// ─── Animation ───
+
+.reveal-base() {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity @duration @ease-out,
+              transform @duration @ease-out;
+}
+
+.reveal-visible() {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transition(@props: all, @duration: @duration-fast) {
+  transition: @props @duration @ease-out;
+}

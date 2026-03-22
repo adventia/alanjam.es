@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qantas Ventures — Alan James</title>
+  <meta name="description" content="12 CRO experiments, $1.01m first-year EBIT. The target was half that.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="cs cs--qantas-ventures" ng-controller="PortfolioCtrl as vm">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <picture>
+        <source srcset="../img/projects/qv-hero.webp" type="image/webp">
+        <img class="cs-hero__image" src="../img/projects/qv-hero.jpg" alt="Qantas Ventures health insurance CRO" style="object-position: center calc(50% - 150px);">
+      </picture>
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">Qantas Ventures</div>
+        <h1 class="cs-hero__title"><span class="cs-hero__emphasis">$1.02m</span> new revenue.</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Context
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The context</div>
+        <h2 class="cs-section__title">The target was $500k. <span class="cs-section__title-punch">We doubled it.</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          Qantas Ventures is part of Qantas Loyalty &mdash; the largest loyalty program in the
+          world with around 14 million members. Their partnership with nib to offer Health Insurance
+          had become the fastest growing health fund in Australia, but the digital application
+          funnel was underperforming. Members who spoke to the Sales &amp; Engagement team were
+          four times more likely to convert, so the brief was clear: optimise the funnel to drive
+          more leads to the call centre.
+        </p>
+        <p>
+          I was engaged as both Senior Experience Designer and CRO specialist for a time-boxed
+          6-month engagement. The business plan target was $0.5m first-year EBIT. I designed and
+          ran 12 experiments, each one grounded in analytics, tested with real traffic, and
+          measured against hard revenue metrics. No wireframes handed to a dev team &mdash; I
+          designed it, built it, tested it and iterated on it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Experiment candidates
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/qv-experiments.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/qv-experiments.jpg" alt="Experiment candidate wall">
+    </picture>
+    <figcaption class="cs-image-inline__caption">There was no shortage of experiment candidates</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       First experiment
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The experiments</div>
+        <h2 class="cs-section__title">Staying focused on what matters</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The hardest part was maintaining focus. There was no shortage of ideas, but the remit was
+          specific: drive lead traffic to the S&amp;E team. It would have been easy to chase digital
+          enhancements that increased online sales, but that wasn&rsquo;t the goal. I scored every
+          candidate against two criteria: would it increase calls to S&amp;E, and could I build and
+          measure it within a two-week window? Anything that didn&rsquo;t pass both filters got parked
+          &mdash; regardless of how good it looked on paper.
+        </p>
+        <p>
+          My first experiment moved contact information from the header &mdash; where people are
+          susceptible to banner blindness &mdash; into a prominent banner below the hero with
+          compelling iconography. The hypothesis was simple: increase affordance, increase leads.
+        </p>
+      </div>
+
+      <div class="cs-stats reveal reveal-d2" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">+34%</div>
+          <div class="cs-stat__label">Contact us interactions</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">+43%</div>
+          <div class="cs-stat__label">Total sales</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">1,500</div>
+          <div class="cs-stat__label">New customers p.a.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Digital results wall
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/qv-aras-results.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/qv-aras-results.jpg" alt="Digital results wall showing experiment outcomes">
+    </picture>
+    <figcaption class="cs-image-inline__caption">Aras calls it. Not difficult given the third metric&hellip;</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Stakeholder engagement
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Stakeholder engagement</div>
+        <h2 class="cs-section__title">Making results impossible to ignore</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          This was high-profile work. It required sign-off from Olivia Wirth (CEO, Loyalty) and
+          Alan Joyce (CEO, Qantas Airways). A totally new way of running a project at Ventures &mdash;
+          self-contained, against all normal BAU ways of working.
+        </p>
+        <p>
+          I created a digital results wall in the main thoroughfare of the floor, showing experiments
+          in flight and results as they were called. I gamified the process &mdash; inspired by how
+          Antony Green calls election results on the ABC, I had our analytics expert Aravind be the
+          one to officially call each experiment. Bar charts updated daily from Google Optimize. It
+          became the thing people talked about. Visibility built momentum, and momentum built trust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Login simplification
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--half reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/qv-funnel.gif" alt="Login simplification iterations">
+    <figcaption class="cs-image-inline__caption">Login simplification &mdash; four iterations to get it right</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Login simplification deep dive
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Deep dive</div>
+        <h2 class="cs-section__title">The experiment that took four attempts to win</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Simplify the login screen, reduce cognitive load, more people progress through the
+          funnel. Should have been the quickest win. The existing layout had a login box on the
+          left and &lsquo;continue as guest&rsquo; on the right &mdash; both looked identical,
+          and we were losing 50% of users at this point.
+        </p>
+        <p>
+          I made it single column, reduced the affordance of the guest flow, and added messaging
+          about why logging in would save time. And it didn&rsquo;t work. Three more iterations
+          also didn&rsquo;t. But this experiment taught us the most:
+        </p>
+      </div>
+
+      <div class="cs-learnings reveal reveal-d2" reveal>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">1</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Users take the path of least resistance</div>
+            <div class="cs-learning__body">When we changed &lsquo;Are you a QFF member?&rsquo; to &lsquo;Would you like to login to save time?&rsquo; &mdash; we gave them an out and they took it.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">2</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">More words, more confusion</div>
+            <div class="cs-learning__body">Explaining why one route was better increased cognitive load &mdash; the exact thing we were trying to reduce.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">3</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Question the metrics constantly</div>
+            <div class="cs-learning__body">A persistent ~10% drop in leads fell to ~4% when we included guest-path mobile entries and emailed quotes as valid leads.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          On the fourth attempt &mdash; single column, minimal text, &lsquo;Login to see your
+          quote&rsquo; &mdash; sales increased 32%. That one experiment alone generated $254k
+          lifetime EBIT.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The outcome
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The outcome</div>
+        <h2 class="cs-section__title">11 out of 12 experiments won</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The business plan target was $0.5m annual EBIT and $1m lifetime. With 4.5 months of real
+          experimentation time, we blew it out of the water: $1.01m annual and $2.1m lifetime EBIT
+          across the 12 experiments. 11 of 12 were successful &mdash; including login simplification
+          at the fourth time of asking.
+        </p>
+      </div>
+
+      <div class="cs-stats reveal reveal-d2" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">10,700</div>
+          <div class="cs-stat__label">Increase in leads to S&amp;E team</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">$1.01m</div>
+          <div class="cs-stat__label">Increase in annual EBIT</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">$2.1m</div>
+          <div class="cs-stat__label">EBIT over lifetime of policy</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What this demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this demonstrates</div>
+        <h2 class="cs-section__title">Data-driven design that moves revenue</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          This wasn&rsquo;t about making things prettier. Every experiment was grounded in analytics,
+          tested against real traffic, and measured on hard metrics. The ability to design, build,
+          and ship at speed &mdash; without waiting for handoff cycles &mdash; meant we could
+          compound learnings across 12 experiments in under 5 months. That&rsquo;s what happens
+          when the designer is also the builder.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The client said
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The client said</div>
+      </div>
+      <div class="cs-testimonial cs-testimonial--social reveal reveal-d1" reveal>
+        <div class="cs-testimonial__header">
+          <img class="cs-testimonial__avatar" src="../img/projects/cheb-headshot.jpeg" alt="Cheb Dagher">
+          <div>
+            <div class="cs-testimonial__author">Cheb Dagher</div>
+            <div class="cs-testimonial__role">Senior Manager, User Experience &amp; Design, Qantas Ventures</div>
+          </div>
+        </div>
+        <p class="cs-testimonial__quote">
+          &ldquo;Alan is simply a gun. He&rsquo;s a consummate professional who just gets design on
+          all levels. He&rsquo;s always on the ball and delivers initiatives that are not only
+          performant in the market, but exceed expectations. He was originally hired to work on CRO
+          for lead optimisation and blew that out of the water exceeding KPI&rsquo;s and numbers in
+          the scope of a few months.&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="service-nsw.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Service NSW</div>
+        </a>
+        <a href="westpac.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Westpac</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- AngularJS (CDN — not bundled) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+// ═══════════════════════════════════════════
+// Career Timeline
+// ═══════════════════════════════════════════
+
+.career-row {
+  padding: 15px 0;
+  border-bottom: 1px solid @c-border;
+
+  &__period {
+    .font-mono(12px, 300);
+    color: @c-muted;
+  }
+
+  &__role {
+    .font-body(14px);
+    color: @c-body;
+  }
+
+  &--highlight &__role {
+    font-weight: 600;
+    color: @c-heading;
+  }
+
+  &__org {
+    .font-body(14px);
+    color: @c-muted;
+  }
+}
+
+.career__quals {
+  margin-top: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  span {
+    .font-body(13px);
+    color: @c-muted;
+  }
+
+  &-dot {
+    color: @c-border;
+  }
+}
+
+
+// ═══════════════════════════════════════════
+// Contact CTA
+// ═══════════════════════════════════════════
+
+.contact-dark {
+  background: @c-dark;
+  padding: 80px 0;
+
+  &__title {
+    .font-display(38px, 400);
+    color: @c-dark-text;
+    margin-bottom: 16px;
+  }
+
+  &__body {
+    .font-body(15px);
+    color: @c-dark-muted;
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .font-body(14px);
+    color: @c-dark-text;
+    text-decoration: none;
+    .transition(color);
+
+    &:hover {
+      color: #5BC4A0;
+    }
+  }
+
+  &__icon {
+    .font-mono(10px, 500);
+    color: @c-accent;
+    background: @c-dark-faint;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
+
+
+// ═══════════════════════════════════════════
+// Footer
+// ═══════════════════════════════════════════
+
+.footer {
+  padding: 20px 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid @c-border;
+
+  span {
+    font-size: 12px;
+    color: @c-muted;
+  }
+
+  &__built {
+    font-family: @f-mono;
+    font-size: 11px;
+    font-weight: 300;
+  }
+}
+
+
+// ═══════════════════════════════════════════
+// Scroll Reveal
+// ═══════════════════════════════════════════
+
+.reveal {
+  .reveal-base();
+
+  &--visible {
+    .reveal-visible();
+  }
+}
+
+// Stagger delays (applied as additional classes)
+.reveal-d1 { transition-delay: 0.06s; }
+.reveal-d2 { transition-delay: 0.12s; }
+.reveal-d3 { transition-delay: 0.18s; }
+.reveal-d4 { transition-delay: 0.24s; }
+.reveal-d5 { transition-delay: 0.30s; }
+
+
+// ═══════════════════════════════════════════
+// Responsive overrides
+// ═══════════════════════════════════════════
+
+@media (max-width: @bp-md) {
+  .contact-cta {
+    padding: 36px 28px;
+  }
+
+  .t-display--lg {
+    font-size: 32px;
+  }
+
+  .t-display--md {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .contact-dark {
+    padding: 56px 0;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__body {
+      font-size: 14px;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__link {
+      font-size: 13px;
+      min-height: 44px; // touch target
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 16px 0 24px;
+  }
+
+  .t-display--lg {
+    font-size: 28px;
+  }
+
+  .t-display--md {
+    font-size: 22px;
+  }
+
+  .t-display--sm {
+    font-size: 24px;
+  }
+}

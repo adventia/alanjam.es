@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" fill="none" stroke="#2A2824" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Pinky up -->
+  <path d="M8 24 L8 6"/>
+  <!-- Index up -->
+  <path d="M26 24 L26 6"/>
+  <!-- Middle + ring tucked -->
+  <path d="M13 20 C14 16, 20 16, 21 20"/>
+  <!-- Palm -->
+  <path d="M8 24 C8 32, 26 32, 26 24"/>
+  <!-- Thumb -->
+  <path d="M26 28 C30 28, 32 25, 32 21"/>
+</svg>

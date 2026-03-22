@@ -1,0 +1,157 @@
+// ═══════════════════════════════════════════
+// Approach
+// Dark section with design beliefs and the
+// "What I bring together" junction panel.
+// ═══════════════════════════════════════════
+
+
+// ─── Section titles ───
+
+.approach {
+  &__title {
+    color: @c-dark-text;
+    margin-bottom: 20px;
+  }
+
+  &__intro {
+    color: @c-dark-muted;
+    margin-bottom: 28px;
+  }
+}
+
+
+// ─── Belief items ───
+
+.belief {
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid @c-dark-border;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__heading {
+    font-family: @f-display;
+    font-size: 20px;
+    font-weight: 400;
+    color: @c-dark-text;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &__body {
+    .font-body(14px);
+    line-height: 1.75;
+    color: @c-dark-subtle;
+  }
+}
+
+
+// ─── Junction panel ───
+
+.section--dark > .container > .grid-2 {
+  align-items: start;
+}
+
+.junction-panel-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+.junction-panel {
+  background: @c-dark-surface;
+  border-radius: @radius;
+  border: 1px solid @c-dark-faint;
+  padding: 36px 32px;
+}
+
+.junction-pair {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid @c-dark-ghost;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__labels {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    font-family: @f-display;
+    font-size: 15px;
+    font-weight: 400;
+    color: @c-dark-text;
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+  }
+
+  &__dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: @c-accent;
+  }
+
+  &__desc {
+    .font-body(13px);
+    line-height: 1.65;
+    color: @c-dark-subtle;
+  }
+}
+
+@media (max-width: @bp-sm) {
+  .approach__title {
+    font-size: 22px;
+  }
+
+  .junction-panel-wrap {
+    position: static;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .junction-panel {
+    padding: 48px 16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .junction-pair__name {
+    font-size: 16px;
+  }
+
+  .junction-pair__desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .junction-pair__labels {
+    gap: 8px;
+  }
+
+  .belief {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+}

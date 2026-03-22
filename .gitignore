@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.tmp/
+App/css/main.css
+App/css/main.css.map
+.DS_Store
