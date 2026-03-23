@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
   <!-- endbuild -->
 </head>
 
-<body ng-controller="PortfolioCtrl as vm">
+<body>
 
   <a href="#main" class="skip-link">Skip to main content</a>
 
@@ -26,7 +26,7 @@
        Nav
        ═══════════════════════════════════════ -->
 
-  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <div class="nav__left">
         <a href="#" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
@@ -261,8 +261,23 @@
         </div>
       </a>
 
+      <!-- Designing in the Age of AI (Hero card) -->
+      <a href="pages/ai-collaboration.html" class="project-card project-card--hero reveal reveal-d1" reveal
+         style="background-color: #F0E8DE; background-image: url('img/projects/ai-hero.png'); background-position: center 35%;">
+        <div class="project-card__overlay" style="background: linear-gradient(to bottom, rgba(240,232,222,0.4) 0%, rgba(240,232,222,0.5) 20%, rgba(42,40,36,0.7) 50%, rgba(42,40,36,0.95) 70%, rgba(42,40,36,0.98) 100%);"></div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span class="project-card__client">This portfolio</span>
+          </div>
+          <div class="project-card__metric">6,066 lines of code. Zero written by me.</div>
+          <div class="project-card__metric-detail">Built entirely through conversation with AI</div>
+          <p class="project-card__teaser">What happens when a designer with 30 years of judgement uses AI as an amplifier, not a replacement.</p>
+          <span class="project-card__link">View case study &rarr;</span>
+        </div>
+      </a>
+
       <!-- Service NSW -->
-      <a href="pages/service-nsw.html" class="project-card reveal reveal-d1" reveal
+      <a href="pages/service-nsw.html" class="project-card reveal reveal-d2" reveal
          style="background-color: #2B5EA7; background-image: url('img/projects/snsw-hero.png');">
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
@@ -277,7 +292,7 @@
       </a>
 
       <!-- Qantas Ventures -->
-      <a href="pages/qantas-ventures.html" class="project-card project-card--qv reveal reveal-d2" reveal
+      <a href="pages/qantas-ventures.html" class="project-card project-card--qv reveal reveal-d3" reveal
          style="background-color: #7B4BAA; background-image: url('img/projects/qv-hero.jpg');">
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
@@ -292,7 +307,7 @@
       </a>
 
       <!-- Westpac -->
-      <a href="pages/westpac.html" class="project-card project-card--wbc reveal reveal-d3" reveal
+      <a href="pages/westpac.html" class="project-card project-card--wbc reveal reveal-d4" reveal
          style="background-color: #C17A28; background-image: url('img/projects/wbc-hero.jpg');">
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
@@ -307,7 +322,7 @@
       </a>
 
       <!-- Loadin Brand & Design System -->
-      <a href="pages/loadin-brand.html" class="project-card project-card--loadin-brand reveal reveal-d4" reveal
+      <a href="pages/loadin-brand.html" class="project-card project-card--loadin-brand reveal reveal-d5" reveal
          style="background-color: #1A1A1A; background-image: url('img/projects/loadin-hero.jpg');">
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
@@ -371,9 +386,6 @@
     </div>
   </footer>
 
-
-  <!-- AngularJS (CDN — not bundled) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
   <!-- build:js js/portfolio.min.js -->
   <script src="js/app.js"></script>

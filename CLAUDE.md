@@ -97,7 +97,7 @@ The design translates Alan's working style directly:
 
 ### Stack
 
-- **HTML** with **AngularJS 1.8.3** for dynamic bits (scroll reveals, card expand/collapse, nav state)
+- **HTML** with **vanilla JavaScript** for dynamic bits (scroll reveals, nav state, smooth scrolling)
 - **LESS** for styles (modular partials)
 - **Grunt** for task running (LESS compilation, livereload, production build)
 - **Node 11.15.0** — all dependencies MUST be compatible with this version. No optional chaining (?.), no nullish coalescing (??), no modern ES syntax in dependencies.
@@ -117,7 +117,7 @@ portfolio-grunt/
 ├── Gruntfile.js
 ├── package.json
 ├── App/
-│   ├── index.html          ← Homepage (AngularJS app)
+│   ├── index.html          ← Homepage
 │   ├── pages/              ← Case study pages (to be built)
 │   ├── less/
 │   │   ├── main.less       ← Entry point (imports all partials)
@@ -133,19 +133,19 @@ portfolio-grunt/
 │   │   └── components.less ← Career, contact, footer, scroll reveal animations
 │   ├── css/                ← Grunt-compiled output (gitignored)
 │   ├── js/
-│   │   └── app.js          ← AngularJS controller + directives
+│   │   └── app.js          ← Vanilla JS (scroll reveals, nav state, smooth scroll)
 │   ├── img/
 │   └── assets/
 └── dist/                   ← Production build output
 ```
 
-### AngularJS architecture
+### JavaScript architecture
 
-- `ng-app="portfolio"` on `<html>`
-- `PortfolioCtrl as vm` — manages nav scroll state and project card expand/collapse
-- `reveal` directive — IntersectionObserver-based scroll animation (adds `reveal--visible` class)
-- `smooth-scroll` directive — anchor link navigation
-- Cards toggle via `vm.toggle('project-id')` and `vm.isExpanded('project-id')`
+- Zero frameworks — pure vanilla JS in an IIFE
+- `[reveal]` attribute — IntersectionObserver-based scroll animation (adds `reveal--visible` class)
+- `[smooth-scroll]` attribute — anchor link smooth scrolling
+- Nav scroll state — adds `nav--scrolled` class at 50px scroll offset
+- Nav dark section detection — adds `nav--over-dark` when overlapping `.section--dark`
 
 ### LESS architecture
 
@@ -209,7 +209,7 @@ portfolio-grunt/
 
 ## Working with Alan
 
-- Alan's background is AngularJS — he uses it for prototyping and for loadin.com
+- Alan's background includes AngularJS — he uses it for loadin.com
 - He prefers working in HTML/CSS/JS directly, not frameworks like React
 - He has strong opinions on design quality and attention to detail
 - He uses Grunt for task running (same setup as loadin.com)

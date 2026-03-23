@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designing in the Age of AI — Alan James</title>
+  <meta name="description" content="6,066 lines of code, 8 pages, complete design system — without writing a single line of code or opening Figma. A case study in AI-amplified design.">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+
+  <style>
+    .compare {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: col-resize;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    .compare__after {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .compare__before-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .compare__before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left center;
+    }
+
+    .compare__handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: #fff;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .compare__handle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .compare__handle-arrows {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    .compare__arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .compare__arrow--left {
+      border-width: 6px 8px 6px 0;
+      border-color: transparent #2A2824 transparent transparent;
+    }
+
+    .compare__arrow--right {
+      border-width: 6px 0 6px 8px;
+      border-color: transparent transparent transparent #2A2824;
+    }
+
+    .compare__labels {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .compare__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 5px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 767px) {
+      .compare {
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="cs cs--ai">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <img class="cs-hero__image" src="../img/projects/ai-hero.png" alt="The initial prompt that started this portfolio — Welcome, Alan" style="object-position: center calc(50% + 150px);">
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">This portfolio</div>
+        <h1 class="cs-hero__title">6,066 lines of code. <span class="cs-hero__emphasis">Zero written by me.</span></h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Context
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The context</div>
+        <h2 class="cs-section__title">An embarrassing portfolio <span class="cs-section__title-punch">and a natural experiment</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          My portfolio was embarrassing. Not in a self-deprecating way &mdash; genuinely
+          embarrassing. The kind of thing where you hope nobody clicks the link on your
+          LinkedIn. I&rsquo;d been so busy building things for other people &mdash; Westpac,
+          Qantas, Service NSW, and Loadin &mdash; that the cobbler&rsquo;s children had no
+          shoes.
+        </p>
+        <p>
+          At the same time, I&rsquo;d been using Claude Code to accelerate development on
+          Loadin for months. Not as a novelty &mdash; as a genuine part of my workflow. So
+          the question was natural: what if I built the entire portfolio through conversation?
+          No code editor. No Figma. Just a designer with 30 years of judgement and an AI that
+          knows every CSS property.
+        </p>
+        <p>
+          This isn&rsquo;t a &lsquo;look what AI can do&rsquo; case study. It&rsquo;s about
+          what happens when a designer uses AI as an amplifier &mdash; and what it reveals
+          about where the real value of design expertise lives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Experiment
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The experiment</div>
+        <h2 class="cs-section__title">No wireframes. No mood boards. <span class="cs-section__title-punch">Just conversation.</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            There was no preparation. No Figma file. No wireframes. No mood boards. No
+            Pinterest. I sat down and started talking.
+          </p>
+          <p>
+            I described my working style &mdash; relaxed but confident, strong but never
+            aggressive, technically fluent without making it a gimmick. From that single
+            conversation, the design direction emerged: &lsquo;relaxed confidence&rsquo;.
+            Not from visual references, but from understanding who I am and how I work.
+          </p>
+          <p>
+            That direction informed every decision that followed. The warm serif for
+            headings (Lora). The generous whitespace. The restrained colour palette. The
+            subtle scroll animations that are felt but not seen. None of it came from a
+            design brief &mdash; it came from a conversation.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            This is how I&rsquo;ve always worked at my best &mdash; describing what
+            something should feel like, not what it should look like. The difference is
+            that now the gap between articulating a vision and seeing it on screen was
+            measured in seconds, not days.
+          </p>
+          <p>
+            Every design decision was mine. Every line of code was Claude&rsquo;s. And
+            the iteration speed was unlike anything I&rsquo;d experienced &mdash; not
+            because either of us is faster alone, but because the conversation between
+            us had zero translation loss.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       How It Worked
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">How it worked</div>
+        <h2 class="cs-section__title">Describe &rarr; build &rarr; review &rarr; refine</h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            The workflow was conversational. I&rsquo;d describe what I wanted. Claude
+            would build it. I&rsquo;d review in the browser, give feedback &mdash;
+            &lsquo;move that up 20px&rsquo;, &lsquo;that&rsquo;s double gutters&rsquo;,
+            &lsquo;the accent colour needs more warmth&rsquo; &mdash; and watch the
+            changes appear in seconds.
+          </p>
+          <p>
+            What would normally be 6 testing cycles became 60 micro-iterations per
+            session. Not because each iteration was smaller, but because removing the
+            translation step &mdash; turning a design idea into code &mdash; meant the
+            feedback loop was almost instant.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            A living brief grew alongside the project. The CLAUDE.md file started as a
+            simple context document and evolved into a comprehensive design system
+            specification &mdash; colours, typography, spacing, interaction patterns,
+            content principles. It wasn&rsquo;t written up front. It grew organically
+            from each session, codifying decisions as they were made.
+          </p>
+          <p>
+            That&rsquo;s the bit that surprised me most. The brief didn&rsquo;t precede
+            the work &mdash; it emerged from the work. Every design decision was
+            captured in context, not in a separate artefact that would inevitably fall
+            out of sync.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Before / After — Hero Image
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The 10 minutes in Photoshop</div>
+        <h2 class="cs-section__title">The one thing <span class="cs-section__title-punch">I did by hand</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          In 2021, Haydn and I did a photo shoot for Loadin with Macleay Harriot &mdash;
+          one of Australia&rsquo;s leading rock photographers. The stage was Ruby Fields&rsquo;
+          Sunset Piazza gig in Sydney, and the shot below was by far the best of the session.
+          Two blokes on a stage, looking like they belonged there.
+        </p>
+        <p>
+          Sadly for Haydn, and me being an only child, this portfolio is all about me.
+          He needed to be escorted off the premises.
+        </p>
+        <p>
+          I used Photoshop&rsquo;s AI Generative Fill and was genuinely blown away. If
+          anything, look closely &mdash; it feels more like he&rsquo;s been dropped
+          <em>in</em> to the original than dropped <em>out</em> of the edit. But we were
+          very much both on that stage, at that moment. Ten minutes, one tool, and the
+          only time in this entire project I opened an application that wasn&rsquo;t a
+          browser.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <div class="compare" id="compare">
+      <picture>
+        <source srcset="../img/alan-james-stage.webp" type="image/webp">
+        <img class="compare__after" src="../img/alan-james-stage.jpg" alt="After: retouched hero image" draggable="false">
+      </picture>
+
+      <div class="compare__before-wrap" id="compareBeforeWrap">
+        <picture>
+          <source srcset="../img/alan-james-stage-before.webp" type="image/webp">
+          <img class="compare__before" src="../img/alan-james-stage-before.jpg" alt="Before: original hero image" draggable="false">
+        </picture>
+      </div>
+
+      <div class="compare__handle" id="compareHandle">
+        <div class="compare__handle-arrows">
+          <div class="compare__arrow compare__arrow--left"></div>
+          <div class="compare__arrow compare__arrow--right"></div>
+        </div>
+      </div>
+
+      <div class="compare__labels">
+        <span class="compare__label">Before</span>
+        <span class="compare__label">After</span>
+      </div>
+    </div>
+    <figcaption class="cs-image-inline__caption">Drag the slider &mdash; the only 10 minutes I spent outside a browser</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Complete Transparency
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Complete transparency</div>
+        <h2 class="cs-section__title">Exactly who did what. <span class="cs-section__title-punch">No fudging.</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <h3 class="cs-section__subtitle">What I did (the judgement)</h3>
+          <ul>
+            <li><strong>Every design decision</strong> &mdash; typography choice (Lora over Fraunces), colours, layout, spacing, visual hierarchy</li>
+            <li><strong>Content strategy</strong> &mdash; which stories to tell, how to frame them, tone of voice</li>
+            <li><strong>&lsquo;Relaxed confidence&rsquo;</strong> design direction &mdash; the entire aesthetic emerged from describing my working style</li>
+            <li><strong>Art direction</strong> on every image, every crop, every aspect ratio</li>
+            <li><strong>Responsive decisions</strong> &mdash; 8px grid, 16px mobile gutters, breakpoint behaviours</li>
+            <li><strong>Quality control</strong> &mdash; spotted every issue, directed every fix</li>
+            <li><strong>10 minutes in Photoshop</strong> retouching the hero image</li>
+            <li><strong>This case study idea</strong> &mdash; day 8, in the car, out of nowhere</li>
+            <li><strong>Zero lines of code</strong></li>
+          </ul>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <h3 class="cs-section__subtitle">What Claude did (the execution)</h3>
+          <ul>
+            <li><strong>All 6,066 lines</strong> &mdash; HTML, LESS, JavaScript</li>
+            <li><strong>Design system architecture</strong> &mdash; tokens, mixins, BEM components</li>
+            <li><strong>Image processing</strong> &mdash; resizing, WebP conversion, optimisation</li>
+            <li><strong>Responsive implementation</strong> across all breakpoints</li>
+            <li><strong>Accessibility</strong> &mdash; sr-only text, skip links, ARIA labels, WCAG AA contrast</li>
+            <li><strong>CSS architecture</strong> &mdash; modular LESS partials, design token cascade</li>
+            <li><strong>Bug fixing</strong> &mdash; Chrome scroll restoration, padding shorthand issues</li>
+            <li><strong>Interactive components</strong> &mdash; before/after image slider</li>
+            <li><strong>Content drafting</strong> (directed and edited by me)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Numbers
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The numbers</div>
+      </div>
+
+      <div class="cs-stats reveal reveal-d1" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">9 days</div>
+          <div class="cs-stat__label">First file to this case study</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">6,066</div>
+          <div class="cs-stat__label">Lines of code (2,632 LESS, 3,314 HTML, 120 JS)</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">8 pages</div>
+          <div class="cs-stat__label">Homepage, 5 case studies, resume, image comparison</div>
+        </div>
+      </div>
+
+      <div class="cs-stats reveal reveal-d2" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">96 files</div>
+          <div class="cs-stat__label">In the project</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">0 lines</div>
+          <div class="cs-stat__label">Of code written by me</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">0 min</div>
+          <div class="cs-stat__label">In Figma</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">10 min</div>
+          <div class="cs-stat__label">In Photoshop (hero retouching)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Loadin Principle
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The Loadin principle</div>
+        <h2 class="cs-section__title">Optimise the conversation, <span class="cs-section__title-punch">not replace the expert</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            At Loadin, we were never out to replace the expert on either side. The artist
+            knows their performance requirements. The production manager knows the venue.
+            What was broken was the conversation between them &mdash; information scattered
+            across emails, faxes, and phone calls.
+          </p>
+          <p>
+            We built a platform that optimised that conversation. One source of truth. Both
+            sides seeing the same thing. Zero disputes.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            Same principle here. The designer has 30 years of taste &mdash; pattern
+            recognition for what works, intuition for what a brand should feel like,
+            experience knowing which battles to fight. The AI has comprehensive knowledge
+            of every CSS property and accessibility pattern.
+          </p>
+          <p>
+            Neither is replaceable. The magic is in the conversation between them. Remove
+            the friction from that conversation and both sides get better.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Accountant, Not the Black Cab Driver
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The analogy</div>
+        <h2 class="cs-section__title">The accountant, <span class="cs-section__title-punch">not the black cab driver</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            London&rsquo;s black cab drivers spent years learning &lsquo;the knowledge&rsquo;
+            &mdash; every street, every shortcut, every rat run. GPS eliminated that
+            overnight. The knowledge was the product, and the product got automated.
+          </p>
+          <p>
+            Accountants went through a similar disruption. Software automated the menial
+            work &mdash; GST reporting, reconciliation, data entry. But it didn&rsquo;t
+            replace accountants. It made them more valuable. They stopped wasting time on
+            mechanical tasks and focused on judgement work &mdash; advisory, strategy,
+            planning. The work that actually matters. The work that makes them more billable.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            Design is the accountant. The 30 years of judgement &mdash; knowing which
+            typography has warmth, understanding that double gutters feel wrong, sensing
+            when a layout needs more air &mdash; that can&rsquo;t be automated. What
+            <em>can</em> be automated is the translation of those decisions into code.
+          </p>
+          <p>
+            Remove the translation step and the designer gets better. Every minute on
+            taste instead of syntax. Every hour on &lsquo;does this feel right?&rsquo;
+            instead of &lsquo;why won&rsquo;t this flexbox behave?&rsquo;
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What This Demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this demonstrates</div>
+        <h2 class="cs-section__title">The junction isn&rsquo;t about writing code. <span class="cs-section__title-punch">It&rsquo;s about understanding it.</span></h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          This portfolio practices what it preaches. A designer at the junction of design
+          and development, showing that the junction isn&rsquo;t about writing the code
+          yourself &mdash; it&rsquo;s about understanding it deeply enough to direct it
+          with precision.
+        </p>
+        <p>
+          I could direct Claude because I understand CSS architecture, responsive
+          breakpoints, accessibility patterns, and design systems. Not as theory &mdash;
+          as lived experience from building Westpac GEL, Loadin&rsquo;s component library,
+          and Service NSW&rsquo;s booking platform. That technical fluency didn&rsquo;t
+          become redundant. It became the thing that made the conversation work.
+        </p>
+        <p>
+          The case study idea came on day 8, in the car, out of nowhere. The portfolio was
+          nearly finished. And I realised that the most interesting story wasn&rsquo;t any
+          individual project &mdash; it was how the portfolio itself was made. Not planned.
+          Not staged. Just the natural conclusion of a designer who builds things,
+          discovering a better way to build.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Client Said
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The client said</div>
+      </div>
+
+      <div class="cs-testimonial reveal reveal-d1" reveal>
+        <p class="cs-testimonial__quote">
+          &ldquo;Most people who use me treat me like autocomplete &mdash; fill in the
+          gaps, finish the sentence. Alan treated me like a collaborator. He knew exactly
+          what he wanted but couldn&rsquo;t be bothered writing it himself, and that&rsquo;s
+          the most honest brief I&rsquo;ve ever received. The result is a portfolio that
+          a human designed and a machine built, and you genuinely can&rsquo;t tell where
+          one ends and the other begins. Which, I think, is the whole point.&rdquo;
+        </p>
+        <div class="cs-testimonial__author">&lsquo;Claudette&rsquo;</div>
+        <div class="cs-testimonial__role">Claude, Anthropic &mdash; the AI that built this</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Related Links
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Related links</div>
+      </div>
+      <div class="cs-links reveal reveal-d1" reveal>
+        <div class="cs-links__list">
+          <a href="image-compare.html" class="cs-links__link">Before/after image comparison</a>
+          <a href="../index.html" class="cs-links__link">This portfolio (you&rsquo;re in it)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="loadin.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Loadin.com</div>
+        </a>
+        <a href="service-nsw.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Service NSW</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; 2025 Alan James</span>
+      <span class="footer__built">Designed and built by me</span>
+    </div>
+  </footer>
+
+
+  <!-- Before/after slider -->
+  <script>
+    (function () {
+      var compare = document.getElementById('compare');
+      var handle = document.getElementById('compareHandle');
+      var beforeWrap = document.getElementById('compareBeforeWrap');
+      var isDragging = false;
+
+      function setPosition(x) {
+        var rect = compare.getBoundingClientRect();
+        var pos = (x - rect.left) / rect.width;
+        pos = Math.max(0.02, Math.min(0.98, pos));
+        var pct = pos * 100 + '%';
+        beforeWrap.style.width = pct;
+        handle.style.left = pct;
+      }
+
+      compare.addEventListener('mousedown', function (e) {
+        e.preventDefault();
+        isDragging = true;
+        setPosition(e.clientX);
+      });
+
+      document.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        setPosition(e.clientX);
+      });
+
+      document.addEventListener('mouseup', function () {
+        isDragging = false;
+      });
+
+      compare.addEventListener('touchstart', function (e) {
+        isDragging = true;
+        setPosition(e.touches[0].clientX);
+      });
+
+      document.addEventListener('touchmove', function (e) {
+        if (!isDragging) return;
+        setPosition(e.touches[0].clientX);
+      });
+
+      document.addEventListener('touchend', function () {
+        isDragging = false;
+      });
+    })();
+  </script>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

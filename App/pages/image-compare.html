@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,10 +183,10 @@
   </style>
 </head>
 
-<body class="cs" ng-controller="PortfolioCtrl as vm">
+<body class="cs">
 
   <!-- Nav -->
-  <nav class="nav" aria-label="Main navigation" ng-class="{ 'nav--scrolled': vm.scrolled }">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <div class="nav__left">
         <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
@@ -292,9 +292,6 @@
       });
     })();
   </script>
-
-  <!-- AngularJS (CDN — not bundled) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
   <!-- build:js ../js/portfolio.min.js -->
   <script src="../js/app.js"></script>
