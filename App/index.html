@@ -21,10 +21,11 @@
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Fonts -->
+  <!-- Fonts (async load to avoid render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- build:css css/portfolio.min.css -->
   <link rel="stylesheet" href="css/main.css">
@@ -106,16 +107,16 @@
       <div class="hero__logos">
         <picture>
           <source srcset="img/logos/qantas.webp" type="image/webp">
-          <img class="hero__logo" src="img/logos/qantas.png" alt="Qantas">
+          <img class="hero__logo" src="img/logos/qantas.png" alt="Qantas" width="500" height="102">
         </picture>
         <img class="hero__logo" src="img/logos/westpac.svg" alt="Westpac" width="120" height="24">
         <picture>
           <source srcset="img/logos/service-nsw.webp" type="image/webp">
-          <img class="hero__logo" src="img/logos/service-nsw.png" alt="Service NSW">
+          <img class="hero__logo" src="img/logos/service-nsw.png" alt="Service NSW" width="500" height="162">
         </picture>
         <picture>
           <source srcset="img/logos/thomson-reuters.webp" type="image/webp">
-          <img class="hero__logo" src="img/logos/thomson-reuters.png" alt="Thomson Reuters">
+          <img class="hero__logo" src="img/logos/thomson-reuters.png" alt="Thomson Reuters" width="500" height="71">
         </picture>
         <img class="hero__logo" src="img/logos/expedia.svg" alt="Expedia" width="120" height="27">
       </div>
@@ -388,7 +389,7 @@
 
   <footer class="container">
     <div class="footer">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Alan James</span>
+      <span>&copy; <span class="js-year"></span> Alan James</span>
       <span class="footer__built">Designed and built by me</span>
     </div>
   </footer>

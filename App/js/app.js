@@ -155,4 +155,12 @@
     }
   }
 
+
+  /* ─── Dynamic copyright year ─── */
+
+  var yearEls = document.querySelectorAll('.js-year');
+  for (var y = 0; y < yearEls.length; y++) {
+    yearEls[y].textContent = new Date().getFullYear();
+  }
+
 })();
