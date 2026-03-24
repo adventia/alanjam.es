@@ -242,6 +242,20 @@
     }
   }
 
+  // Closer — display-font closing statement
+  &__closer {
+    margin-top: 40px;
+    max-width: 800px;
+
+    p {
+      font-family: @f-display;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: @c-heading;
+    }
+  }
+
   // Leader text — larger opening body for context sections
   &__body--leader {
     font-size: 18px;
@@ -369,7 +383,7 @@
 .cs-stats {
   display: flex;
   gap: 16px;
-  margin: 40px 0 0;
+  margin: 40px 0;
 }
 
 .cs-stat {
@@ -708,6 +722,10 @@
 
     &__body--leader {
       font-size: 16px;
+    }
+
+    &__closer p {
+      font-size: 18px;
     }
 
     &__subtitle {
