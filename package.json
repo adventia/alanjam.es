@@ -4,6 +4,14 @@
   "description": "Alan James — Product Designer Portfolio",
   "author": "Alan James",
   "private": true,
+  "engines": {
+    "node": "11.15.0"
+  },
+  "scripts": {
+    "start": "grunt serve",
+    "build": "grunt build",
+    "dist": "grunt dist"
+  },
   "devDependencies": {
     "grunt": "1.4.1",
     "grunt-contrib-less": "1.4.1",

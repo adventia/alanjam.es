@@ -6,6 +6,19 @@
   <title>Alan James — Product Designer</title>
   <meta name="description" content="Award-winning product and interaction designer with 30 years of craft. Design, code, and leadership at the intersection.">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alan James — Product Designer">
+  <meta property="og:description" content="Award-winning product and interaction designer with 30 years of craft. Design, code, and leadership at the intersection.">
+  <meta property="og:image" content="https://alanjam.es/img/alan-james-stage.jpg">
+  <meta property="og:url" content="https://alanjam.es/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alan James — Product Designer">
+  <meta name="twitter:description" content="Award-winning product and interaction designer with 30 years of craft. Design, code, and leadership at the intersection.">
+  <meta name="twitter:image" content="https://alanjam.es/img/alan-james-stage.jpg">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Fonts -->
@@ -29,7 +42,7 @@
   <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <div class="nav__left">
-        <a href="#" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <a href="index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
         <div class="nav__awards">
           <picture>
             <source srcset="img/awards/gda-gold-winner-blk.webp" type="image/webp">
@@ -95,7 +108,7 @@
           <source srcset="img/logos/qantas.webp" type="image/webp">
           <img class="hero__logo" src="img/logos/qantas.png" alt="Qantas">
         </picture>
-        <img class="hero__logo" src="img/logos/westpac.svg" alt="Westpac">
+        <img class="hero__logo" src="img/logos/westpac.svg" alt="Westpac" width="120" height="24">
         <picture>
           <source srcset="img/logos/service-nsw.webp" type="image/webp">
           <img class="hero__logo" src="img/logos/service-nsw.png" alt="Service NSW">
@@ -104,7 +117,7 @@
           <source srcset="img/logos/thomson-reuters.webp" type="image/webp">
           <img class="hero__logo" src="img/logos/thomson-reuters.png" alt="Thomson Reuters">
         </picture>
-        <img class="hero__logo" src="img/logos/expedia.svg" alt="Expedia">
+        <img class="hero__logo" src="img/logos/expedia.svg" alt="Expedia" width="120" height="27">
       </div>
     </div>
 
@@ -247,14 +260,13 @@
     <div class="project-grid">
 
       <!-- Loadin.com (Hero card) -->
-      <a href="pages/loadin.html" class="project-card project-card--hero reveal" reveal
-         style="background-color: #1A1A1A; background-image: url('img/projects/loadin-gda-hero.jpg');">
+      <a href="pages/loadin.html" class="project-card project-card--hero project-card--loadin reveal" reveal>
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
             <span class="project-card__client">loadin.com</span>
           </div>
-          <div class="project-card__metric">Good Design Award<sup style="font-size: 0.5em;">&reg;</sup> <span style="color: #FFD700;">Gold</span> winner</div>
+          <div class="project-card__metric">Good Design Award<sup class="project-card__reg">&reg;</sup> <span class="project-card__gold">Gold</span> winner</div>
           <div class="project-card__metric-detail">Australian Good Design Awards 2024</div>
           <p class="project-card__teaser">From zero to one. Solving product market fit globally through human centred design. Who knew?</p>
           <span class="project-card__link">View case study →</span>
@@ -262,9 +274,8 @@
       </a>
 
       <!-- Designing in the Age of AI (Hero card) -->
-      <a href="pages/ai-collaboration.html" class="project-card project-card--hero reveal reveal-d1" reveal
-         style="background-color: #F0E8DE; background-image: url('img/projects/ai-hero.png'); background-position: center 35%;">
-        <div class="project-card__overlay" style="background: linear-gradient(to bottom, rgba(240,232,222,0.4) 0%, rgba(240,232,222,0.5) 20%, rgba(42,40,36,0.7) 50%, rgba(42,40,36,0.95) 70%, rgba(42,40,36,0.98) 100%);"></div>
+      <a href="pages/ai-collaboration.html" class="project-card project-card--hero project-card--ai reveal reveal-d1" reveal>
+        <div class="project-card__overlay project-card__overlay--light"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
             <span class="project-card__client">alanjam.es</span>
@@ -277,8 +288,7 @@
       </a>
 
       <!-- Service NSW -->
-      <a href="pages/service-nsw.html" class="project-card reveal reveal-d2" reveal
-         style="background-color: #2B5EA7; background-image: url('img/projects/snsw-hero.png');">
+      <a href="pages/service-nsw.html" class="project-card project-card--snsw reveal reveal-d2" reveal>
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
@@ -292,8 +302,7 @@
       </a>
 
       <!-- Qantas Ventures -->
-      <a href="pages/qantas-ventures.html" class="project-card project-card--qv reveal reveal-d3" reveal
-         style="background-color: #7B4BAA; background-image: url('img/projects/qv-hero.jpg');">
+      <a href="pages/qantas-ventures.html" class="project-card project-card--qv reveal reveal-d3" reveal>
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
@@ -307,8 +316,7 @@
       </a>
 
       <!-- Westpac -->
-      <a href="pages/westpac.html" class="project-card project-card--wbc reveal reveal-d4" reveal
-         style="background-color: #C17A28; background-image: url('img/projects/wbc-hero.jpg');">
+      <a href="pages/westpac.html" class="project-card project-card--wbc reveal reveal-d4" reveal>
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
@@ -322,8 +330,7 @@
       </a>
 
       <!-- Loadin Brand & Design System -->
-      <a href="pages/loadin-brand.html" class="project-card project-card--loadin-brand reveal reveal-d5" reveal
-         style="background-color: #1A1A1A; background-image: url('img/projects/loadin-hero.jpg');">
+      <a href="pages/loadin-brand.html" class="project-card project-card--loadin-brand reveal reveal-d5" reveal>
         <div class="project-card__overlay"></div>
         <div class="project-card__body">
           <div class="project-card__meta">
@@ -381,7 +388,7 @@
 
   <footer class="container">
     <div class="footer">
-      <span>© 2025 Alan James</span>
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> Alan James</span>
       <span class="footer__built">Designed and built by me</span>
     </div>
   </footer>

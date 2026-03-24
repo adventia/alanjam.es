@@ -37,6 +37,17 @@
     );
   }
 
+  &__overlay--light {
+    background: linear-gradient(
+      to bottom,
+      rgba(240, 232, 222, 0.4) 0%,
+      rgba(240, 232, 222, 0.5) 20%,
+      rgba(42, 40, 36, 0.7) 50%,
+      rgba(42, 40, 36, 0.95) 70%,
+      rgba(42, 40, 36, 0.98) 100%
+    );
+  }
+
   &:hover &__overlay {
     background: linear-gradient(
       to bottom,
@@ -95,6 +106,14 @@
     color: #fff;
   }
 
+  &__reg {
+    font-size: 0.5em;
+  }
+
+  &__gold {
+    color: #FFD700;
+  }
+
   &__metric-detail {
     font-family: @f-body;
     font-size: 12px;
@@ -133,6 +152,39 @@
     transform: translateY(0);
   }
 
+  // ─── Project-specific backgrounds ───
+
+  &--loadin {
+    background-color: @c-loadin-dark;
+    background-image: url('../img/projects/loadin-gda-hero.jpg');
+  }
+
+  &--ai {
+    background-color: @c-ai;
+    background-image: url('../img/projects/ai-hero.png');
+    background-position: center 35%;
+  }
+
+  &--snsw {
+    background-color: @c-service-nsw;
+    background-image: url('../img/projects/snsw-hero.png');
+  }
+
+  &--qv {
+    background-color: @c-qantas-ventures;
+    background-image: url('../img/projects/qv-hero.jpg');
+  }
+
+  &--wbc {
+    background-color: @c-westpac;
+    background-image: url('../img/projects/wbc-hero.jpg');
+  }
+
+  &--loadin-brand {
+    background-color: @c-loadin-dark;
+    background-image: url('../img/projects/loadin-hero.jpg');
+  }
+
   // ─── Hero card (spans both columns) ───
 
   &--hero {
@@ -149,7 +201,7 @@
 .tag {
   .font-mono(10px, 400);
   color: @c-muted;
-  background: #F5F2ED;
+  background: @c-tag-bg;
   padding: 4px 10px;
   border-radius: @radius-xs;
   letter-spacing: 0.01em;
@@ -213,15 +265,15 @@
     }
 
     &--qv {
-      background-position: center calc(~"50% - 65px") !important;
+      background-position: center calc(~"50% - 65px");
     }
 
     &--wbc {
-      background-position: center calc(~"50% - 60px") !important;
+      background-position: center calc(~"50% - 60px");
     }
 
     &--loadin-brand {
-      background-position: center calc(~"50% - 50px") !important;
+      background-position: center calc(~"50% - 50px");
     }
 
     &--hero {

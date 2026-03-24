@@ -51,7 +51,6 @@ module.exports = function (grunt) {
 			production: {
 				options: {
 					compress: true,
-					yuicompress: true,
 					optimization: 2
 				},
 				files: {
