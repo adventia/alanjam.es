@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qantas Loyalty — Credit Card Selector — Alan James</title>
+  <meta name="description" content="The golden goose goes platinum. Redesigning Qantas Loyalty's flagship Credit Card Selector with faceted search.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Qantas Loyalty — Credit Card Selector — Alan James">
+  <meta property="og:description" content="39 credit cards. 23 providers. One decision. Redesigning the flagship Credit Card Selector with faceted search.">
+  <meta property="og:image" content="https://alanjam.es/img/projects/ql-ccs-prototype.jpg">
+  <meta property="og:url" content="https://alanjam.es/pages/qantas-loyalty-ccs.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qantas Loyalty — Credit Card Selector — Alan James">
+  <meta name="twitter:description" content="39 credit cards. 23 providers. One decision. Redesigning the flagship Credit Card Selector with faceted search.">
+  <meta name="twitter:image" content="https://alanjam.es/img/projects/ql-ccs-prototype.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts (async load to avoid render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="cs cs--qantas">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap">
+      <picture>
+        <img class="cs-hero__image" src="../img/projects/ql-ccs-hero.jpg" alt="Qantas Points-earning credit cards from major Australian providers" style="object-position: center calc(50% - 40px);">
+      </picture>
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">Qantas Loyalty</div>
+        <h1 class="cs-hero__title">The golden goose goes <span class="cs-hero__emphasis">platinum.</span></h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Context
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The context</div>
+        <h2 class="cs-section__title">39 cards. 23 providers. <span class="cs-section__title-punch">One decision.</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          After being very reluctantly let go &mdash; alongside 20,000 others &mdash; in the
+          early days of COVID, my manager Cheb made me a promise: &ldquo;I&rsquo;ll keep asking
+          you to come back until you say yes.&rdquo; Four years and several conversations later,
+          I finally said yes &mdash; in October 2024.
+        </p>
+        <p>
+          The brief was specific: run my CRO experimentation playbook on the flagship page for
+          the business &mdash; the <a href="https://cardsandbanking.qantas.com/compare-credit-cards" target="_blank" rel="noopener">Credit Card Selector</a>. This is the page where customers browse,
+          research, and ultimately apply for one of 39 different credit cards from 23 different
+          providers that earn Qantas Frequent Flyer points.
+        </p>
+        <p>
+          To put the stakes in perspective: over 35% of all Australian consumer credit card
+          transactions are on Qantas Points-earning cards. 18.3 million Frequent Flyer members.
+          This page is the front door to a very large part of the business.
+        </p>
+      </div>
+
+      <div class="cs-stats reveal reveal-d2" reveal>
+        <div class="cs-stat">
+          <div class="cs-stat__value">35%+</div>
+          <div class="cs-stat__label">Of all AU credit card transactions on QFF cards</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">18.3m</div>
+          <div class="cs-stat__label">Frequent Flyer members</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat__value">39</div>
+          <div class="cs-stat__label">Credit cards from 23 providers</div>
+        </div>
+      </div>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          All credit cards are not created equal, and there&rsquo;s a mental calculation to be done
+          on the value derived from each of them based on your circumstances. As soon as I arrived
+          I identified significant interaction design challenges, and in my first week I proposed
+          that alongside a cadence of quick-win experiments, I would also investigate a north star
+          &mdash; a fundamentally better way to solve what I call the &lsquo;million to one&rsquo; problem.
+        </p>
+        <p>
+          This wasn&rsquo;t new territory. I was responsible for exactly this at Thomson Reuters
+          a decade earlier &mdash; their flagship legal research tool Westlaw AU. Getting from a
+          long list to a manageable short list to the thing you&rsquo;re after, with the least
+          friction possible. Legal precedents or low-fee credit cards &mdash; same mental model.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Experimentation
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Experimentation</div>
+        <h2 class="cs-section__title">Quick wins while building the case</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          I hit the ground running identifying key areas to optimise: filtering, sorting, de-clutter,
+          microcopy, interface uplift, and education. These were workshopped with stakeholders and
+          prioritised through a desirability&ndash;viability&ndash;feasibility exercise.
+        </p>
+        <p>
+          The lead experiment targeted two hypotheses. First, the three CTAs were squeezed together
+          and felt like part of the same action &mdash; de-clutter. Second, the word
+          &lsquo;apply&rsquo; creates click fear because users aren&rsquo;t actually applying,
+          they&rsquo;re being transferred to the partner website &mdash; microcopy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Whiteboard themes
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-whiteboard.jpg" alt="Whiteboard showing experiment theme classifications — filtering, sorting, de-clutter, interface design, copy, education">
+    <figcaption class="cs-image-inline__caption">Day one &mdash; classifying experiment themes on the whiteboard. You can see &lsquo;Go to Partner&rsquo; in the bottom right.</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       CTA deep dive
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The 106% that wasn&rsquo;t</div>
+        <h2 class="cs-section__title">Click-bait is not conversion</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Using Optimizely, we tested a range of CTAs from the control &lsquo;Apply&rsquo;
+          (most click-fear) through to &lsquo;View offer&rsquo; (most click-bait). The results
+          were compelling but nuanced &mdash; the 106.73% uplift on &lsquo;View offer&rsquo;
+          was actually click-bait, not genuine intent. Users arrived at the partner site, realised
+          there wasn&rsquo;t an &lsquo;offer&rsquo; as such, and left.
+        </p>
+        <p>
+          The winning variant was &lsquo;Go to partner&rsquo; &mdash; the &lsquo;Goldilocks&rsquo; moment
+          that didn&rsquo;t create fear or bait. We validated this with actual
+          conversion-per-variation data, not just click-through. We then iterated by separating
+          the compare action and relocating &lsquo;more features&rsquo; to a more logical
+          position under the feature bullet points &mdash; producing further significant
+          double-digit improvements.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Experiment results
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-results.png" alt="Multivariate CTA experiment results showing click-through rates across seven variants">
+    <figcaption class="cs-image-inline__caption">The full results &mdash; &lsquo;View Offer&rsquo; won on clicks but &lsquo;Go to Partner&rsquo; won on actual conversions</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The pivot
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="cs-section__closer reveal" reveal>
+        <p>
+          We could change microcopy and layout of tiles all day. But what was fundamentally
+          broken was the &lsquo;million to one&rsquo; problem &mdash; how do you get from
+          39 cards down to a manageable number to compare, and then make your choice?
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The North Star
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The north star</div>
+        <h2 class="cs-section__title">Faceted search &mdash; the ubiquitous pattern</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The existing sort and filter was broken. The zone that contained it didn&rsquo;t make
+          it clear which was a sort, which was a filter, and which affected estimated points
+          earning. We were making the user think &mdash; hard.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Old design
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-old-design.jpg" alt="The original Credit Card Selector — an overwhelming comparison table" style="object-position: center top;">
+    <figcaption class="cs-image-inline__caption">The original CCS &mdash; an endless comparison table with unclear sort and filter controls</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Competitive analysis
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="cs-section__body reveal" reveal>
+        <p>
+          I did a &lsquo;looking out&rsquo; exercise &mdash; desktop research on marketplace
+          competitors and how they solve this globally. Confirming what I already knew, there was
+          a ubiquitous pattern across all &lsquo;million to one&rsquo; searches: filtering on
+          the left sidebar, sorting as a header, products below in a single vertical tile stack.
+          This pattern has a name &mdash; faceted search. It lets the customer choose their own
+          adventure, filtering and sorting in real time until they reach a manageable shortlist.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Competitive analysis
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-competitive.jpg" alt="Competitive analysis across Qantas properties, financial comparison sites, and global marketplaces">
+    <figcaption class="cs-image-inline__caption">Looking out &mdash; Qantas, financial comparison sites, and global marketplaces all follow the same pattern</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Building conviction
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Building conviction</div>
+        <h2 class="cs-section__title">The golden goose doesn&rsquo;t change on a hunch</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Credit Card Selector was the golden goose, and any changes to how it worked were
+          significant. We needed to prove beyond all reasonable doubt that this would be a
+          must-win. I put together an exhaustive initiative brief highlighting the opportunities
+          of following a ubiquitous pattern &mdash; backed by independent research.
+        </p>
+      </div>
+
+      <div class="cs-learnings reveal reveal-d2" reveal>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">1</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Sites with optimised product lists cut abandonment from 67&ndash;90% down to 17&ndash;33%</div>
+            <div class="cs-learning__body">Baymard Institute study across 327 leading e-commerce sites with 4,400+ usability test sessions. <br><a href="https://baymard.com/research/ecommerce-product-lists" target="_blank" rel="noopener" class="cs-learning__source">Source: Baymard Institute</a></div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">2</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">43% of online shoppers go straight to filters before even browsing</div>
+            <div class="cs-learning__body">Yet 42% of e-commerce sites lack sufficient filtering options, directly impacting conversions. <br><a href="https://baymard.com/blog/ecommerce-product-lists-report-and-benchmark" target="_blank" rel="noopener" class="cs-learning__source">Source: Baymard Institute</a></div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">3</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Shoppers who use search and filtering convert 2&ndash;4&times; more often</div>
+            <div class="cs-learning__body">Increased interaction time and engagement consistently correlate with higher conversion and customer lifetime value. <br><a href="https://econsultancy.com/nine-tips-to-help-improve-your-product-filtering-options/" target="_blank" rel="noopener" class="cs-learning__source">Source: Econsultancy</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          The goal was clear: increase time on site through more interaction and immersion with
+          the cards and their features. This would inevitably mean more conversions. But the
+          attribution challenge was real &mdash; once users leave CCS, they&rsquo;re on the
+          partner website, and there&rsquo;s only a 30% chance of linking the two sessions,
+          especially if they&rsquo;re not logged in.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The prototype
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The prototype</div>
+        <h2 class="cs-section__title">Designed it. Built it. Tested it.</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          I built a fully working, interactive HTML prototype using the same production JSON data
+          for the credit cards. Not a Figma click-through &mdash; a real, working application
+          that participants could interact with as if it was the new production website. I&rsquo;ve
+          been working with the open-source Westpac GEL framework since its inception, having been
+          there at the start, and over ten years I&rsquo;ve fine-tuned it into an exceptional
+          prototyping tool &mdash; styled here in full Qantas branding.
+        </p>
+        <p>
+          This is the compound advantage of being both designer and developer. I didn&rsquo;t
+          propose faceted search and wait for a dev team to build a prototype &mdash; I built
+          it myself, with real data, in a fraction of the time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Early wireframe
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-wireframe-early.png" alt="Early Balsamiq wireframe exploring the faceted search concept">
+    <figcaption class="cs-image-inline__caption">Early low-fidelity exploration &mdash; refine by provider, fee, and features with sort options</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       Image: Prototype
+       ═══════════════════════════════════════ -->
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <img class="cs-image-inline__img" src="../img/projects/ql-ccs-prototype.jpg" alt="Working HTML prototype of the faceted search Credit Card Selector with real Qantas card data">
+    <figcaption class="cs-image-inline__caption">The working prototype &mdash; real production data, full Qantas branding, fully interactive faceted search</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       User research
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">User research</div>
+        <h2 class="cs-section__title">Testing with real people, not assumptions</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Moderated through the Askable platform, the testing thoroughly validated the problem
+          and the proposed solution. The faceted search pattern aligned with users&rsquo; existing
+          mental models from other marketplace experiences &mdash; they didn&rsquo;t need to
+          learn anything new.
+        </p>
+      </div>
+
+      <div class="cs-learnings reveal reveal-d2" reveal>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">1</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Sort or filter first?</div>
+            <div class="cs-learning__body">Users&rsquo; approaches to narrowing down varied &mdash; some sorted first, some filtered. The faceted search pattern supported both equally.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">2</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">What matters most in getting from 39 to 1</div>
+            <div class="cs-learning__body">Fee structure, points earn rate, and card provider were the top three factors &mdash; confirming which filters to prioritise.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">3</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Mobile to browse. Desktop to decide.</div>
+            <div class="cs-learning__body">Users browsed on mobile (39 cards, disposable time on a bus) then switched to desktop for serious comparison (4&ndash;5 cards). A mobile viewport isn&rsquo;t good enough for side-by-side.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          That device-switching insight identified a gap: there was no way to move from one device
+          to the other frictionlessly. This was prioritised as a backlog feature. We also used
+          Dovetail AI to analyse the research findings, cutting synthesis time from days to hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The outcome
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The outcome</div>
+        <h2 class="cs-section__title">Hockey-stick growth</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          Validated hypothesis. Detailed design. Full product plan. Convincing the execs it would
+          have no unintended consequences. The faceted search went live towards end of 2025.
+          Although hard numbers are under NDA, the uptick was significant &mdash; a hockey-stick
+          graph that continues to climb.
+        </p>
+      </div>
+
+      <figure class="cs-image-inline cs-image-inline--natural reveal reveal-d3" reveal style="padding-top: 16px; padding-bottom: 16px;">
+        <img class="cs-image-inline__img" src="../img/projects/ql-ccs-hockey-stick.svg" alt="Hockey-stick conversion growth graph after faceted search launch" style="max-height: none; object-fit: contain; border-radius: 8px; border: 1px solid #E6E2DB;">
+      </figure>
+
+      <div class="cs-section__body reveal reveal-d3" reveal>
+        <p>
+          The timing couldn&rsquo;t have been better. The RBA&rsquo;s recent decision on credit
+          card surcharges means that if surcharges are banned or reduced, the value proposition of
+          points-earning cards shifts &mdash; more consumers will be comparing cards on features
+          and fees rather than defaulting to whatever their bank offers. The Credit Card Selector
+          becomes even more critical as the primary decision-making tool.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What came next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What came next</div>
+        <h2 class="cs-section__title">Awarded the crown jewels</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          As soon as this project completed, I was awarded what the team calls the
+          &lsquo;crown jewels&rsquo; &mdash; leading design on the <a href="https://www.qantasnewsroom.com.au/media-releases/qantas-frequent-flyer-unveils-the-biggest-changes-to-status-in-program-history" target="_blank" rel="noopener">biggest changes to the
+          Qantas Loyalty program in its 40-year history</a>, re-imagining the My Account and
+          Activity Statement pages that every single QFF member uses to track their progress
+          within the program.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What this demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this demonstrates</div>
+        <h2 class="cs-section__title">Pattern recognition across domains</h2>
+      </div>
+      <div class="cs-section__body reveal reveal-d1" reveal>
+        <p>
+          The &lsquo;million to one&rsquo; problem isn&rsquo;t unique to credit cards. I solved
+          the same pattern for legal research at Thomson Reuters a decade earlier. This case study
+          shows what thirty years of cross-domain experience looks like in practice: recognising
+          the pattern, knowing the solution exists, building the evidence, and then building the
+          thing &mdash; not handing it off, but actually building it. The prototype wasn&rsquo;t
+          a deliverable to be implemented. It was the proof.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="ai-collaboration.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Designing in the Age of AI</div>
+        </a>
+        <a href="service-nsw.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Service NSW</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; <span class="js-year"></span> Alan James</span>
+      <a href="ai-collaboration.html" class="footer__built">Designed and built by us</a>
+    </div>
+  </footer>
+
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

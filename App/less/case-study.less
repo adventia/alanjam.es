@@ -248,6 +248,24 @@
     li strong {
       color: @c-heading;
     }
+
+    a {
+      color: @c-logo;
+      text-decoration: none;
+      border-bottom: 1px solid fade(@c-logo, 30%);
+      .transition(border-color);
+
+      &:hover {
+        border-bottom-color: @c-logo;
+      }
+
+      &[target="_blank"]::after {
+        content: '\2197';
+        display: inline-block;
+        margin-left: 3px;
+        font-size: 0.85em;
+      }
+    }
   }
 
   // Closer — display-font closing statement
@@ -462,6 +480,26 @@
     font-size: 14px;
     color: @c-body;
     line-height: 1.6;
+  }
+
+  &__source {
+    font-size: 12px;
+    color: @c-logo;
+    text-decoration: none;
+    border-bottom: 1px solid fade(@c-logo, 30%);
+    .transition(border-color);
+    margin-top: 4px;
+
+    &:hover {
+      border-bottom-color: @c-logo;
+    }
+
+    &[target="_blank"]::after {
+      content: '\2197';
+      display: inline-block;
+      margin-left: 3px;
+      font-size: 0.85em;
+    }
   }
 }
 
