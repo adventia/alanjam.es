@@ -376,6 +376,29 @@
     max-height: none;
     object-fit: contain;
   }
+
+  &--fade {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to bottom, fade(@c-bg, 0%), @c-bg);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cs-image-inline__img {
+      max-height: none;
+      object-fit: contain;
+    }
+  }
 }
 
 
