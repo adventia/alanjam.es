@@ -484,13 +484,14 @@
 
   &__source {
     font-size: 12px;
-    color: @c-logo;
+    color: @c-muted;
     text-decoration: none;
-    border-bottom: 1px solid fade(@c-logo, 30%);
-    .transition(border-color);
+    border-bottom: 1px solid fade(@c-muted, 30%);
+    .transition(~"color, border-color");
     margin-top: 4px;
 
     &:hover {
+      color: @c-logo;
       border-bottom-color: @c-logo;
     }
 
