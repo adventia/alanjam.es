@@ -160,4 +160,39 @@ module.exports = function (grunt) {
 
 	// Preview production build
 	grunt.registerTask('dist', ['build', 'connect:dist', 'watch']);
+
+	// Generate resume PDF via Chrome headless
+	grunt.registerTask('pdf', 'Export resume to PDF', function () {
+		var done = this.async();
+		var output = 'App/assets/Alan-James-Resume.pdf';
+		var chrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+		var url = 'http://localhost:9001/pages/resume.html';
+		var args = [
+			'--headless=new',
+			'--disable-gpu',
+			'--no-pdf-header-footer',
+			'--print-to-pdf=' + output,
+			'--run-all-compositor-stages-before-draw',
+			url
+		];
+
+		grunt.log.writeln('Exporting ' + url + ' → ' + output);
+
+		var spawn = require('child_process').spawn;
+		var proc = spawn(chrome, args);
+
+		proc.on('close', function (code) {
+			if (code === 0) {
+				grunt.log.ok('PDF saved to ' + output);
+			} else {
+				grunt.log.error('Chrome exited with code ' + code);
+			}
+			done(code === 0);
+		});
+
+		proc.on('error', function (err) {
+			grunt.log.error('Could not launch Chrome: ' + err.message);
+			done(false);
+		});
+	});
 };

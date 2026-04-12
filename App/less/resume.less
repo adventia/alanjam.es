@@ -248,7 +248,19 @@
 // Print styles
 // ═══════════════════════════════════════════
 
+@page {
+  margin: 10mm 12mm;
+}
+
 @media print {
+  // Kill browser default headers/footers and background
+  html, body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .resume {
     background: #fff;
 
@@ -264,7 +276,14 @@
   }
 
   .resume-awards {
-    display: none;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    img {
+      height: 28px;
+      opacity: 1;
+    }
   }
 
   .resume-header {
@@ -280,7 +299,7 @@
 
   .resume-tagline {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .resume-contact {
@@ -298,6 +317,7 @@
 
   .resume-role {
     margin-bottom: 16px;
+    page-break-inside: avoid;
   }
 
   .resume-achievements li,
@@ -322,6 +342,11 @@
     font-size: 10px;
   }
 
+  // Hide case study links — not useful on paper
+  .resume-role__link {
+    display: none;
+  }
+
   .resume-footer a {
     color: @c-heading;
 
@@ -331,9 +356,13 @@
     }
   }
 
-  // Prevent page breaks inside roles
-  .resume-role {
+  // Prevent orphan sections at page bottom
+  .resume-section {
     page-break-inside: avoid;
+  }
+
+  .resume-section__title {
+    page-break-after: avoid;
   }
 }
 
