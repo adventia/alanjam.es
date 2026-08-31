@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flightcase — Alan James</title>
+  <meta name="description" content="Governing a design system when the audience is a machine. A frozen baseline, a compile gate, three one-directional consumers — and constraints that held under pressure.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Flightcase — Alan James">
+  <meta property="og:description" content="Governing a design system when the other contributor is a machine. A frozen baseline, a compile gate, three one-directional consumers — and constraints that held under pressure.">
+  <meta property="og:image" content="https://alanjam.es/img/projects/flightcase-card-hero.jpg">
+  <meta property="og:url" content="https://alanjam.es/pages/flightcase.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flightcase — Alan James">
+  <meta name="twitter:description" content="Governing a design system when the other contributor is a machine.">
+  <meta name="twitter:image" content="https://alanjam.es/img/projects/flightcase-card-hero.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Fonts (async load to avoid render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- build:css ../css/portfolio.min.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- endbuild -->
+
+  <style>
+    /* Page-scoped: inline code accents (file names, tokens, hashes) */
+    .cs code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.85em;
+      background: rgba(42, 40, 36, 0.06);
+      border-radius: 4px;
+      padding: 0.1em 0.35em;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body class="cs cs--flightcase">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       Nav
+       ═══════════════════════════════════════ -->
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="../index.html" class="nav__logo">alanjam<span class="nav__logo-tld">.es</span></a>
+        <div class="nav__awards">
+          <picture>
+            <source srcset="../img/awards/gda-gold-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-gold-winner-blk.png" alt="Good Design Award Gold Winner">
+          </picture>
+          <picture>
+            <source srcset="../img/awards/gda-winner-blk.webp" type="image/webp">
+            <img class="nav__award" src="../img/awards/gda-winner-blk.png" alt="Good Design Award Winner">
+          </picture>
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="../index.html#work" class="nav__link">All work</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-hero">
+    <div class="cs-hero__image-wrap cs-hero__image-wrap-dark">
+      <img class="cs-hero__image" src="../img/projects/flightcase-card-hero.jpg" alt="Welcome to Flightcase — the FXL documentation property, with the Loadin apps front and centre" style="object-position: center top;" width="2400" height="1215">
+    </div>
+
+    <div class="cs-hero__inner">
+      <div class="reveal" reveal>
+        <a href="../index.html#work" class="cs-hero__back">&larr; All work</a>
+      </div>
+
+      <div class="reveal reveal-d1" reveal>
+        <div class="cs-hero__client">loadin.com</div>
+        <h1 class="cs-hero__title">Governing a design system when the audience <span class="cs-hero__emphasis">is a machine.</span></h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Intro
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Flightcase</div>
+        <h2 class="cs-section__title">The interesting problem <span class="cs-section__title-punch">was not the tokens</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          Loadin runs on a design system I first had involvement with in 2014. Westpac were pioneers in this space and one of the first commercial enterprises to fully open source their
+          codebase. But it's had 8 years of design and tech debt, and in mid 2026 I started fixing it.
+        </p>
+        <p>
+          That last detail is the reason this is worth a case study. The interesting problem
+          was not the tokens (the design variety). It was working out what stops an agent
+          from quietly making things worse at a speed no human review can keep up with, something I had more experience of that than a person should ever be subjected to.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       The Real Reason
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The real reason</div>
+        <h2 class="cs-section__title">Keeping Claude and Codex <span class="cs-section__title-punch">honest</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            My relationship with Augmented Intelligence has been, well - complicated.  When it is good,
+            it is mind-blowingly good.  And when it is bad I am not lying when I say that Clippy would
+            do a better job, mainly because it at least tells you that it is about to do something.  The current
+            models are optimised on pleasing and cadence, and if the user is happy and impressed with the amount being done,
+            it's doing it's job.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            Where it goes wrong is when an expert user challenges the model, finds out that it's been
+            cutting corners or not following rules, and it goes into appeasement mode, and just loses all of it's superpowers and
+            makes elementary mistakes every single turn.  It's fascinating that both Anthropic and OpenAI models follow exactly the
+            same pattern, and they have both admitted this on record with me to be the case.
+          </p>
+        </div>
+      </div>
+      <figure class="cs-image-inline cs-image-inline--natural reveal reveal-d1" reveal style="padding-top: 48px; padding-bottom: 48px;">
+        <picture>
+          <source srcset="../img/projects/flightcase-clippy.webp" type="image/webp">
+          <img class="cs-image-inline__img" src="../img/projects/flightcase-clippy.png" alt="Clippy: It looks like you'd like me to push broken code to production on a show weekend with 250,000 attendees. Would you like help with that?" width="800" height="484" style="max-width: 350px; margin: 0 auto;">
+        </picture>
+        <figcaption class="cs-image-inline__caption">This is not a hypothetical. Codex did this (three times) while I was watching my daughter's football match and are now the reason deployments are strictly human-only.  Claude has a similar rap sheet.</figcaption>
+      </figure>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>So with this in mind, the only way to responsibly use AI for fast cadence on mission critical platforms is to automate as
+            much of the checking of the work as possible, not just whether it works, but whether it follows conventions like column layouts,
+            button hierarchy, or ways to move things up and down in a list.  For this, the only way to do that is to have a detailed experience
+            language that it can reference as the exemplar.  Usually you build design systems for humans to adhere to - in my case it was almost exclusively for
+            agentic AI.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            After a lot of frustration with 'appeasement mode' we built out an overall governance engine - The Oracle.  This is a series of front and back end gates
+            that must be proven before code will be committed to the repo.  It also requires an independent adversarial review by another LLM.  This
+            has swung between Claude and Codex for which role is done by who, and the Oracle is LLM independent, it is a set of rules that can be followed by
+            any provider.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       The Starting Point
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The starting point</div>
+        <h2 class="cs-section__title">Staring into <span class="cs-section__title-punch">eight years of debt</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader  reveal reveal-d1" reveal>
+        <p>I did have a rudimentary GEL library of my own - there's an earlier <a href="loadin-brand.html">case study</a> on just this - however it was dated, limited and contradictory in places.
+I needed to modernise and in the process stare into the 8-odd years of debt I had accumulated on the loadin journey.  I'm honestly impressed how much stood the test of time,
+but design tokens weren't a thing back then, so it was time for a complete review of where the experience language was at.</p>
+
+        <figure class="cs-image-inline" style="padding-top: 48px; padding-bottom: 0;">
+          <video class="cs-image-inline__img" autoplay loop muted playsinline width="480" height="270">
+            <source src="../img/projects/loadin-designsystem.webm" type="video/webm">
+            <source src="../img/projects/loadin-designsystem.mp4" type="video/mp4">
+            <img src="../img/projects/loadin-designsystem.gif" alt="The original Loadin design system" width="480" height="270">
+          </video>
+          <figcaption class="cs-image-inline__caption">The original Loadin design system (2018) &mdash; dated, limited, and contradictory in places.</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       The Inheritance
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The inheritance</div>
+        <h2 class="cs-section__title">Brand slots from a bank, <span class="cs-section__title-punch">ten years of design system evolution</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            GEL&rsquo;s colours are named <code>@color-A</code> through <code>@color-Q</code>.
+            That looks like laziness until you know where it came from. They are brand slots
+            from the Westpac multibrand system that carried not only Westpac but St George, Bank SA and Bank of
+            Melbourne amongst others, deliberately not named by hue so a subbrand could refill them.
+          </p>
+          <p>
+            The Westpac GEL was also one of the first design systems in the world to be
+            released as open source &mdash; which is why building on it was the obvious call given my involvement in it - 
+            I knew it from the inside: in its early days I sat
+            on the GEL-X governance board, recommending candidates for inclusion into the
+            main GEL. 
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            Although a lot stands the test of time, 8 years of POC to global adoption will always have it's debt to pay: 1,558 inline margin attributes, two
+            competing spacing scales (869 declarations on the six-multiple scale GEL
+            documents, 389 on Bootstrap 3&rsquo;s five-multiple base), and five type sizes
+            crammed inside four pixels.
+          </p>
+          <p>
+            I also knew at the outset that loadin was going to very likely be multi-brand eventually, and more on that soon hopefully, but this was systems thinking
+            at the very earliest part of the journey.  So much I did in year one is now paying dividends eight years later.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/wbc-gel.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/wbc-gel.jpg" alt="The Westpac GEL — Let's speak the same language" width="2200" height="1652">
+    </picture>
+    <figcaption class="cs-image-inline__caption">The Westpac GEL &mdash; one of the first design systems in the world released as open source. I sat on the GEL-X governance board that recommended candidates for inclusion into the main GEL.</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The Charter
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The charter</div>
+        <h2 class="cs-section__title">Three rules, <span class="cs-section__title-punch">written before any work started</span></h2>
+      </div>
+      <div class="cs-learnings reveal reveal-d1" reveal>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">1</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title"><code>gel.less</code> is frozen</div>
+            <div class="cs-learning__body">Mainly the Westpac GEL but adapted over the years, but this was the line in the sand. It does not get edited again. Everything new lands in <code>flightcase.less</code>, which is imported after it, so redefining a variable there re-skins every existing use through lazy evaluation without touching the frozen file. Every improvement becomes a deliberate, reviewable diff against a fixed baseline instead of a change buried in 2,900 lines.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">2</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Every change survives a compile gate</div>
+            <div class="cs-learning__body">Build <code>main.less</code> before and after, compare the output by hash. A pure refactor must be byte-identical. Anything else must be an intentional difference with a written explanation.</div>
+          </div>
+        </div>
+        <div class="cs-learning">
+          <div class="cs-learning__number" aria-hidden="true">3</div>
+          <div class="cs-learning__content">
+            <div class="cs-learning__title">Off-scale values get no token and no utility</div>
+            <div class="cs-learning__body">Naming a value blesses it. Values still under review stay visible as outstanding rather than being quietly promoted to canon.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section__body reveal reveal-d2" reveal>
+        <p>
+          That third rule is the one that did the most work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       What the Gate Caught
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What the gate caught</div>
+        <h2 class="cs-section__title">Governance that blocked <span class="cs-section__title-punch">its own author</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            The token commits swapped 54 literals that already matched the scale exactly,
+            28 spacing and 26 type. Compiled output: byte-identical to the parent. The
+            refactor was provably free.
+          </p>
+          <p>
+            13px and 15px were left untokenised by design. They sit inside the contested
+            12 to 16 pixel space we had defined as problematic, and naming them would enshrine values that may
+            yet be collapsed into their neighbours and would almost enable bad behaviour going forward.
+          </p>
+          <p>
+            Then I ran the work through the independent adversarial review -  the verdict was it was undercooked.
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            The blocking finding was mine. I had bound a navigation component&rsquo;s
+            active state directly to <code>@color-A</code>, a brand slot, which violates
+            the charter&rsquo;s own rule that component rules bind to the semantic tier
+            and never to a slot, or theming cannot reach them. I had written the rule
+            eight commits earlier and broken it in the ninth.
+          </p>
+         
+          <p>
+            The main reason for building it was keeping AI to account, and it found me out instead!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Three Consumers, One Direction
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The architecture</div>
+        <h2 class="cs-section__title">Three consumers, <span class="cs-section__title-punch">one direction</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            With loadin, it's a lot different to most corporate design structures I've worked in.  Here, I rarely start in Figma, I mostly either wireframe / sketch and then move to prototyping in
+            a safe sandbox.  So it makes sense for this implementation that the source of truth lives in code and branches out from there.  But there are always times I'm trying things
+            in Figma before I settle on a solution to prototype.
+          </p>
+          <p>So in this case, the source of truth will always be the LESS.  It is where <strong>The Oracle</strong> starts with it's front end governance when the agent submits it's work for code review.</p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            <strong>Figma</strong> receives the semantic tier through a plugin I built, 18
+            variables, each carrying its resolution chain in the description
+            (<code>@color-Primary &rarr; @color-A &rarr; #ff2c55</code>, with source files).
+            Brand slots are never exported. A Figma variable with no source counterpart is
+            reported as divergence and left untouched, never deleted.
+          </p>
+          <p>
+            I use <strong>Supernova</strong> for the documentation system for Flightcase, as I have at Qantas amongst other places.
+            Supernova receives the same tokens through a sync tool I built,
+            consuming the same payload the Figma plugin is built from so there is no
+            delta to have to manage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/flightcase-tokens.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/flightcase-tokens.jpg" alt="Brand token swatches on the published Flightcase site, each caption carrying its resolution chain" width="770" height="325" style="max-width: 770px; margin: 0 auto;">
+    </picture>
+    <figcaption class="cs-image-inline__caption">Provenance in the wild: every token on the published site carries its resolution chain back to the frozen source &mdash; and says so.</figcaption>
+  </figure>
+
+
+  <!-- ═══════════════════════════════════════
+       The Component / Instrument
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">The button</div>
+        <h2 class="cs-section__title">The component that turned <span class="cs-section__title-punch">into an instrument</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            I built a Figma component, <code>Button</code>, deriving every value from source with
+            line references rather than eyeballing it. Four colour variants by four
+            sizes, sixteen cells.
+          </p>
+          <p>
+            Rendering the full matrix in one view showed me something eight years of being in the weeds didn't. The teal variant is only ever square in the
+            product. Primary is never square. But the stylesheet permits every
+            combination, because the square radius and grey border come from a size
+            modifier, <code>btn-md</code>, that composes freely with any colour.
+          </p>
+          <p>
+            I knew that obviously because that was a design call I made, but it was never documented, and I can't expect an LLM 
+            to know all of those nuances that just live in my head.
+            </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            So the stylesheet and the product disagree, and a variant matrix has to pick
+            a side. I ruled usage over stylesheet, deleted the md column as dead
+            vocabulary with the usage evidence attached, and rebuilt the teal cells as
+            what teal actually is in the product, derived by computing the cascade for
+            the real class combination.
+          </p>
+         
+          <p>
+            The one-direction charter turned out to cut both ways. Figma edits never
+            travel into the code, and a Figma-side rendering correction confers no
+            licence to touch the stylesheets either. The rule held in a direction it was not
+            intended for, but paid off nevertheless.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/flightcase-button.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/flightcase-button.jpg" alt="The FXL Variables plugin menu in Figma, and the corrected Button variant matrix it builds" width="1696" height="842">
+    </picture>
+    <figcaption class="cs-image-inline__caption">The plugin&rsquo;s two commands, and what the second one builds: the corrected matrix in Figma &mdash; primary never square, teal only square, and no dead vocabulary.</figcaption>
+  </figure>
+
+
+
+  <!-- ═══════════════════════════════════════
+       What This Demonstrates
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">What this actually demonstrates</div>
+        <h2 class="cs-section__title">The constraints hold <span class="cs-section__title-punch">under pressure</span></h2>
+      </div>
+      <div class="cs-section__grid">
+        <div class="cs-section__body reveal reveal-d1" reveal>
+          <p>
+            Constraints hold under pressure. The gate blocked its author. Contested values stayed untokenised through four separate
+            opportunities to name them. A dead branch was excluded from a projection
+            rather than tidied out of a frozen file. Every one of those was cheaper to skip than to honour. That is the entire test. 
+          </p>
+        </div>
+        <div class="cs-section__body reveal reveal-d2" reveal>
+          <p>
+            The mechanisms are portable. At team scale the compile gate becomes CI, the
+            authority order becomes codeowners and review, the stop conditions become
+            escalation. What does not change is the underlying requirement: when a
+            contributor can produce plausible work faster than anyone can read it, the
+            system needs somewhere the work has to prove itself before it counts.
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+    <!-- ═══════════════════════════════════════
+      In conclusion
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Where it goes next</div>
+        <h2 class="cs-section__title">From cut and paste <span class="cs-section__title-punch">to composition</span></h2>
+      </div>
+      <div class="cs-section__body cs-section__body--leader reveal reveal-d1" reveal>
+        <p>
+          Previously, the loadin GEL was just a simple code library for me to quickly cut and paste componentry for easy re-use.  
+          Now, with agentic AI it needs to be much more atomic than that, with components made up of flexible compositions that 
+          can be constructed like lego to make consistent interfaces without building manually each time. 
+          </p>
+          <p>The more that can be automated, the less mistakes AI agents can make, and more rigorous CI gating can be enforced to give confidence in working at speed.  But this will take time, and as with all good design systems, the FXL will always be a work in progress.  But it is a great start and is already paying dividends with the introduction of spacer tokens, and will really hit it’s stride with the planned re-platforming to React in the near future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <figure class="cs-image-inline cs-image-inline--natural reveal" reveal>
+    <picture>
+      <source srcset="../img/projects/flightcase-welcome.webp" type="image/webp">
+      <img class="cs-image-inline__img" src="../img/projects/flightcase-welcome.jpg" alt="Welcome to Flightcase — the published documentation property" width="2200" height="1435">
+    </picture>
+    <figcaption class="cs-image-inline__caption">Twelve years on from the GEL: the Flightcase documentation property, published mid 2026. Same lineage, same discipline &mdash; now with a machine on the other side of the governance.</figcaption>
+  </figure>
+
+
+
+
+
+  <!-- ═══════════════════════════════════════
+       Related Links
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="reveal" reveal>
+        <div class="cs-section__label">Related links</div>
+      </div>
+      <div class="cs-links reveal reveal-d1" reveal>
+        <div class="cs-links__list">
+          <a href="https://mid-amaranth-mockingbird.preview.supernova-docs.io/latest/welcome-to-flightcase-uQrnNxcS" target="_blank" rel="noopener" class="cs-links__link">Flightcase — the published documentation property</a>
+          <a href="ai-collaboration.html" class="cs-links__link">Designing in the age of AI — how this way of working started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Prev / Next
+       ═══════════════════════════════════════ -->
+
+  <section class="cs-nav section--dark">
+    <div class="cs-nav__inner">
+      <div class="cs-nav__grid reveal" reveal>
+        <a href="ai-collaboration.html" class="cs-nav__link">
+          <div class="cs-nav__direction">&larr; Previous</div>
+          <div class="cs-nav__project">Designing in the age of AI</div>
+        </a>
+        <a href="loadin.html" class="cs-nav__link cs-nav__link--next">
+          <div class="cs-nav__direction">Next &rarr;</div>
+          <div class="cs-nav__project">Loadin.com</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       Contact
+       ═══════════════════════════════════════ -->
+
+  <section id="contact" class="contact-dark" aria-label="Contact information">
+    <div class="container">
+      <div class="reveal" reveal>
+        <h2 class="contact-dark__title">Let's build something great together.</h2>
+        <p class="contact-dark__body">
+          I'm open to senior product design opportunities with organisations who care about
+          craft, impact, and doing things properly. If that sounds like you, I'd love to chat.
+        </p>
+        <div class="contact-dark__links">
+          <a href="mailto:alan.james@adventia.com.au" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">@</span>
+            alan.james@adventia.com.au
+          </a>
+          <a href="https://au.linkedin.com/in/alan-c-james" target="_blank" rel="noopener" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">in</span>
+            au.linkedin.com/in/alan-c-james
+          </a>
+          <a href="tel:+61403914239" class="contact-dark__link">
+            <span class="contact-dark__icon" aria-hidden="true">tel</span>
+            +61 403 914 239
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════ -->
+
+  <footer class="container">
+    <div class="footer">
+      <span>&copy; <span class="js-year"></span> Alan James</span>
+      <a href="ai-collaboration.html" class="footer__built">Designed and built by us</a>
+    </div>
+  </footer>
+
+  <!-- build:js ../js/portfolio.min.js -->
+  <script src="../js/app.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
